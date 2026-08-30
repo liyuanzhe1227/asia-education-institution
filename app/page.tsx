@@ -1,7 +1,7 @@
 'use client';
+/* eslint-disable @next/next/no-img-element */
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 type Lang = 'zh' | 'en';
 
@@ -119,7 +119,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Asia Education Institution home">
-          <Image src="/aei-mark.jpg" alt="Asia Education Institution" width={92} height={92} priority />
+          <img src="/aei-mark.jpg" alt="Asia Education Institution" />
           <span><strong>AEI</strong><small>Asia Education Institution</small></span>
         </a>
         <nav aria-label="Primary navigation">
@@ -199,7 +199,7 @@ export default function Home() {
         <div className="experience-grid">
           {t.experiences.map(([year, partner, title, body], index) => (
             <article className={index === 0 ? 'featured' : ''} key={title}>
-              <Image src={['/scu-ntu-summer.jpg', '/learning-room.jpg', '/campus-group.jpg'][index]} alt="" width={1800} height={1200} unoptimized />
+              <img src={['/scu-ntu-summer.jpg', '/learning-room.jpg', '/campus-group.jpg'][index]} alt="" />
               <div><span>{year}</span><small>{partner}</small><h3>{title}</h3><p>{body}</p></div>
             </article>
           ))}
@@ -223,7 +223,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><Image src="/aei-mark.jpg" alt="" width={84} height={84} /><strong>AEI</strong></div>
+        <div className="footer-brand"><img src="/aei-mark.jpg" alt="" /><strong>AEI</strong></div>
         <p>{t.disclaimer}</p>
         <small>© {new Date().getFullYear()} {t.footer}</small>
       </footer>
