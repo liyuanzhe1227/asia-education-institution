@@ -119,7 +119,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Asia Education Institution home">
-          <img src="/aei-mark.jpg" alt="Asia Education Institution" />
+          <img src="./aei-mark.jpg" alt="Asia Education Institution" />
           <span><strong>AEI</strong><small>Asia Education Institution</small></span>
         </a>
         <nav aria-label="Primary navigation">
@@ -199,7 +199,7 @@ export default function Home() {
         <div className="experience-grid">
           {t.experiences.map(([year, partner, title, body], index) => (
             <article className={index === 0 ? 'featured' : ''} key={title}>
-              <img src={['/scu-ntu-summer.jpg', '/learning-room.jpg', '/campus-group.jpg'][index]} alt="" />
+              <img src={['./scu-ntu-summer.jpg', './learning-room.jpg', './campus-group.jpg'][index]} alt="" />
               <div><span>{year}</span><small>{partner}</small><h3>{title}</h3><p>{body}</p></div>
             </article>
           ))}
@@ -223,7 +223,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-brand"><img src="/aei-mark.jpg" alt="" /><strong>AEI</strong></div>
+        <div className="footer-brand"><img src="./aei-mark.jpg" alt="" /><strong>AEI</strong></div>
         <p>{t.disclaimer}</p>
         <small>© {new Date().getFullYear()} {t.footer}</small>
       </footer>
