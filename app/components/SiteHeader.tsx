@@ -19,6 +19,7 @@ const menus = [
     href: '/cases/', zh: '案例中心', en: 'Case Library',
     children: [
       ['/cases/#overview', '申请数量', 'Application Data'],
+      ['/cases/#year-analysis', '年度项目分析', 'Annual Analysis'],
       ['/cases/#analysis', '匿名案例分析', 'Case Analysis'],
       ['/cases/#outcomes', '录取方向', 'Outcome Areas'],
     ],
@@ -68,20 +69,20 @@ export function SiteHeader() {
   return (
     <>
       <div className="utility-bar">
-        <span>{lang === 'zh' ? '新加坡双语教育与国际合作平台' : 'Singapore bilingual education & global partnership platform'}</span>
+        <span>{lang === 'zh' ? '新加坡教育与国际合作平台' : 'Singapore education and global partnership platform'}</span>
         <div><a href="mailto:eric2015aei@gmail.com">eric2015aei@gmail.com</a><a href="tel:+6586267896">+65 8626 7896</a></div>
       </div>
       <header className="lux-header">
-        <Link className="lux-brand" href="/" aria-label="Asia Education Institution home">
+        <Link className="lux-brand" href="/" aria-label={lang === 'zh' ? '亚瑟（新加坡）教育学院首页' : 'Asia Education Institution home'}>
           <img src={assetPath('aei-mark.jpg')} alt="" />
-          <span><strong>AEI</strong><small>Asia Education Institution</small></span>
+          <span><strong>AEI</strong><small>{lang === 'zh' ? '亚瑟（新加坡）教育学院' : 'Asia Education Institution'}</small></span>
         </Link>
-        <nav className="desktop-nav" aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label={lang === 'zh' ? '主导航' : 'Primary navigation'}>
           {menus.map((menu) => (
             <div className="nav-group" key={menu.href}>
               <Link href={menu.href}>{lang === 'zh' ? menu.zh : menu.en}<span>⌄</span></Link>
               <div className="submenu">
-                <small>{lang === 'zh' ? menu.en : menu.zh}</small>
+                <small>{lang === 'zh' ? `${menu.zh}导航` : `${menu.en} navigation`}</small>
                 {menu.children.map(([href, zh, en], index) => <Link key={href} href={href}><b>0{index + 1}</b>{lang === 'zh' ? zh : en}<span>→</span></Link>)}
               </div>
             </div>
@@ -90,7 +91,7 @@ export function SiteHeader() {
         <div className="lux-actions">
           <button type="button" onClick={shareSite}>{shareLabel}</button>
           <button type="button" onClick={toggleLanguage}>{lang === 'zh' ? 'EN' : '中文'}</button>
-          <button className="menu-toggle" type="button" onClick={() => setMobileOpen(!mobileOpen)} aria-expanded={mobileOpen} aria-label="Menu">{mobileOpen ? '×' : '≡'}</button>
+          <button className="menu-toggle" type="button" onClick={() => setMobileOpen(!mobileOpen)} aria-expanded={mobileOpen} aria-label={lang === 'zh' ? '菜单' : 'Menu'}>{mobileOpen ? '×' : '≡'}</button>
         </div>
       </header>
       {mobileOpen && <div className="mobile-menu">{menus.map((menu) => <details key={menu.href}><summary>{lang === 'zh' ? menu.zh : menu.en}</summary>{menu.children.map(([href, zh, en]) => <Link key={href} href={href} onClick={() => setMobileOpen(false)}>{lang === 'zh' ? zh : en}<span>→</span></Link>)}</details>)}</div>}

@@ -11,20 +11,20 @@ export const metadata: Metadata = {
       : 'https://aei-global-education.liyuanzhe1227.chatgpt.site',
   ),
   title: {
-    default: 'AEI | Asia Education Institution · 亚瑟（新加坡）教育学院',
+    default: 'AEI｜亚瑟（新加坡）教育学院',
     template: '%s | AEI',
   },
-  description: '新加坡双语教育、升学申请、研究发展、国际项目与院校合作平台。A bilingual Singapore platform for admissions, research, global programmes and partnerships.',
+  description: '立足新加坡的升学申请、研究发展、国际学习项目与院校合作平台。',
   openGraph: {
-    title: 'AEI | Connecting education, research and opportunity',
-    description: 'Six connected pathways for students, scholars, universities and organisations.',
+    title: 'AEI｜连接教育、研究与发展机遇',
+    description: '面向学生、研究者、院校与机构的六条完整业务路径。',
     type: 'website',
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'AEI global learning programme' }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'AEI 国际学习项目' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AEI | Asia Education Institution',
-    description: 'Education, research and opportunity — connected across borders.',
+    title: 'AEI｜亚瑟（新加坡）教育学院',
+    description: '连接教育、研究与跨境发展机遇。',
     images: ['/og.jpg'],
   },
 };
