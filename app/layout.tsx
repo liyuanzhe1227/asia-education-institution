@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://liyuanzhe1227.github.io/asia-education-institution/'),
+  metadataBase: new URL('https://aei-global-education.liyuanzhe1227.chatgpt.site'),
   title: 'AEI | Asia Education Institution · 亚瑟（新加坡）教育学院',
   description: 'A bilingual Singapore platform connecting admissions, research, global programmes, institutional partnerships, career development and executive learning.',
   openGraph: {
