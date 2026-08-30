@@ -1,0 +1,17 @@
+'use client';
+/* eslint-disable @next/next/no-img-element */
+
+import { useLanguage } from '../components/LanguageProvider';
+import { assetPath } from '../lib/site-data';
+
+export default function AboutPage() {
+  const { lang } = useLanguage();
+  const tr = (zh: string, en: string) => lang === 'zh' ? zh : en;
+  return <main>
+    <section className="inner-hero about-hero"><p>05 / ABOUT AEI</p><h1>{tr('关于 AEI', 'About AEI')}</h1><div><strong>{tr('立足新加坡，连接亚洲与世界', 'Singapore-based, connecting Asia and the world')}</strong><span>{tr('以双语沟通、跨文化理解和项目化执行，服务个人成长与机构合作。', 'Bilingual communication, cross-cultural understanding and disciplined delivery for individuals and institutions.')}</span></div></section>
+    <section className="about-profile" id="profile"><div><p>ASIA EDUCATION INSTITUTION</p><h2>{tr('做长期主义的\n教育连接者。', 'A long-term connector\nin education.')}</h2><p>{tr('Asia Education Institution（AEI）于 2015 年在新加坡成立。业务由早期的硕博申请与学业规划，逐步发展为覆盖学术研究、国际项目、院校合作、职业发展与机构培训的综合教育平台。', 'Asia Education Institution (AEI) was established in Singapore in 2015. Beginning with postgraduate applications and academic planning, it has developed into a broader platform spanning research, global programmes, institutional partnerships, career development and executive learning.')}</p></div><img src={assetPath('learning-room.jpg')} alt="AEI education programme" /></section>
+    <section className="about-timeline"><div><span>2015</span><p>{tr('AEI 在新加坡成立，启动硕士与博士申请服务。', 'AEI established in Singapore; master’s and doctoral application services begin.')}</p></div><div><span>2017</span><p>{tr('扩展学业辅导、职业规划与国际交流业务。', 'Academic support, career planning and international exchange expand.')}</p></div><div><span>2018—19</span><p>{tr('推进课题组互访、研究生论坛与新加坡暑期项目。', 'Research-group visits, postgraduate forums and Singapore summer programmes delivered.')}</p></div><div><span>2020—23</span><p>{tr('发展线上国际课程、创新项目与更广泛的跨学科申请服务。', 'Online international learning, innovation projects and wider interdisciplinary applications develop.')}</p></div><div><span>2024—26</span><p>{tr('形成六条业务线与院校合作、机构研修并行的服务体系。', 'Six connected pathways emerge across individual, institutional and executive services.')}</p></div></section>
+    <section className="principle-section" id="principles"><div><p>OUR PRINCIPLES</p><h2>{tr('高级感来自克制，\n可信度来自边界。', 'Refinement comes from restraint.\nTrust comes from boundaries.')}</h2></div><div>{[[tr('真实', 'Authentic'), tr('只使用真实背景、真实材料与可核实证据。', 'Authentic profiles, materials and verifiable evidence only.')],[tr('清晰', 'Clear'), tr('先定义目标、范围与责任，再开始执行。', 'Define goals, scope and responsibilities before delivery.')],[tr('匿名', 'Private'), tr('案例公开时移除姓名、证件和敏感材料。', 'Public cases remove names, IDs and sensitive documents.')],[tr('不承诺结果', 'No guarantees'), tr('历史结果不构成未来录取、签证、就业或发表承诺。', 'Past outcomes do not guarantee admission, visa, employment or publication.')]].map(([title, body], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{body}</p></article>)}</div></section>
+    <section className="contact-panel" id="contact"><p>CONTACT AEI</p><h2>{tr('从一次有目标的对话开始。', 'Start with a purposeful conversation.')}</h2><div><a href="tel:+6586267896"><small>{tr('电话', 'PHONE')}</small><strong>+65 8626 7896</strong></a><a href="mailto:eric2015aei@gmail.com"><small>EMAIL</small><strong>eric2015aei@gmail.com</strong></a><a href="https://www.instagram.com/asiaeducationinstitution/"><small>INSTAGRAM</small><strong>@asiaeducationinstitution</strong></a></div><span>{tr('新加坡 · 预约沟通', 'Singapore · By appointment')}</span></section>
+  </main>;
+}
