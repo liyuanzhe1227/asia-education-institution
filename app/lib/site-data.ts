@@ -101,10 +101,15 @@ export type DetailedCase = {
   category: 'master' | 'phd' | 'complex' | 'cross';
   categoryLabel: LocalText;
   title: LocalText;
+  discipline: LocalText;
+  level: LocalText;
+  timeline: LocalText;
+  serviceScope: LocalText;
   profile: LocalText;
   challenge: LocalText;
   strategy: LocalText;
   result: LocalText;
+  evidenceBasis: LocalText;
 };
 
 export const detailedCases: DetailedCase[] = [
@@ -112,37 +117,57 @@ export const detailedCases: DetailedCase[] = [
     id: 'professional-repositioning', year: '2017', category: 'complex',
     categoryLabel: { zh: '低分背景', en: 'Complex profile' },
     title: { zh: '把两年工作经历转化为申请主线', en: 'Turning two years of work into the core application narrative' },
+    discipline: { zh: '工程与项目管理', en: 'Engineering & Project Management' },
+    level: { zh: '授课型硕士', en: 'Taught master’s' },
+    timeline: { zh: '2017 年秋季入学；5 月初取得结果', en: 'Autumn 2017 intake; outcome received in early May' },
+    serviceScope: { zh: '背景诊断、申请定位、材料主线与递交协同', en: 'Profile diagnosis, positioning, application narrative and submission coordination' },
     profile: { zh: '985 本科；加权约 75/100；雅思 6.0；两年全职工作经历。', en: 'Top-tier Chinese university; weighted average around 75/100; IELTS 6.0; two years of full-time work.' },
     challenge: { zh: '学术与语言指标不突出，常规“成绩导向”表达无法形成竞争力。', en: 'Academic and language indicators were not distinctive, making a grade-led application unconvincing.' },
     strategy: { zh: '重构为“专业经验—项目管理能力—深造目标”证据链，弱化横向分数比较，强化职业成熟度与课程匹配。', en: 'Reframed the evidence around professional experience, project capability and a coherent postgraduate objective.' },
     result: { zh: '获得南洋理工大学与曼彻斯特大学联合项目管理项目录取。', en: 'Received an offer for the NTU–University of Manchester joint project-management programme.' },
+    evidenceBasis: { zh: '来源：历史公司介绍中的匿名案例摘要；不公开申请人姓名与原始材料。', en: 'Basis: anonymised case summary in the archived company profile; applicant identity and source documents are not published.' },
   },
   {
     id: 'research-led-phd', year: '2017', category: 'phd',
     categoryLabel: { zh: '博士申请', en: 'Doctoral' },
     title: { zh: '以研究潜力形成多校博士结果', en: 'Building a multi-university doctoral outcome around research potential' },
+    discipline: { zh: '理工科研究型项目', en: 'Research-based STEM programme' },
+    level: { zh: '全日制博士', en: 'Full-time doctoral study' },
+    timeline: { zh: '2017 年秋季入学；6 月取得多校结果', en: 'Autumn 2017 intake; multiple outcomes received in June' },
+    serviceScope: { zh: '研究定位、履历与研究陈述统一、推荐证据和分层申请', en: 'Research positioning, aligned CV and statement, referee evidence and tiered applications' },
     profile: { zh: '985 本科；加权约 86；雅思 7.0；研究生入学考试 330+3.5；中文核心一作。', en: 'Top-tier Chinese university; average around 86; IELTS 7.0; GRE 330+3.5; first-author Chinese core-journal paper.' },
     challenge: { zh: '需要把单篇成果转化为持续的研究能力，而非简单罗列成绩和论文。', en: 'The application needed to show sustained research potential rather than list scores and one publication.' },
     strategy: { zh: '围绕研究主题、方法经验与未来问题意识统一个人履历、研究陈述和推荐证据，并分层匹配博士项目。', en: 'Aligned the CV, research statement and referee evidence around theme, methods and future research questions.' },
     result: { zh: '获得南洋理工大学博士录取，并取得奥克兰大学、澳大利亚国立大学与墨尔本大学博士录取。', en: 'Received doctoral offers from NTU, the University of Auckland, ANU and the University of Melbourne.' },
+    evidenceBasis: { zh: '来源：历史公司介绍中的匿名案例摘要；结果按原始归档表述。', en: 'Basis: anonymised case summary in the archived company profile; outcomes follow the wording of the source archive.' },
   },
   {
     id: 'planning-without-internship', year: '2018', category: 'master',
     categoryLabel: { zh: '硕士申请', en: 'Master’s' },
     title: { zh: '没有实习，如何证明专业准备度', en: 'Demonstrating readiness without internship experience' },
+    discipline: { zh: '城市规划', en: 'Urban Planning' },
+    level: { zh: '授课型硕士', en: 'Taught master’s' },
+    timeline: { zh: '录取信日期为 2017 年 3 月；归档案例页标注为 2018', en: 'Offer letter dated March 2017; archived case page labelled 2018' },
+    serviceScope: { zh: '课程证据梳理、专业动机、学习缺口与目标课程匹配', en: 'Coursework evidence, disciplinary motivation, learning gaps and curriculum fit' },
     profile: { zh: '211 本科；加权约 84；雅思 6.5；无正式工作或实习经历。', en: 'Chinese 211 university; average around 84; IELTS 6.5; no formal work or internship experience.' },
     challenge: { zh: '背景较为标准，但缺少能够直接证明城市规划实践能力的经历。', en: 'A solid but conventional profile lacked direct evidence of urban-planning practice.' },
     strategy: { zh: '从课程、项目与空间问题意识中提取专业证据，建立“已有基础—学习缺口—目标课程”的闭环。', en: 'Extracted discipline evidence from coursework and projects, linking current foundation, learning gaps and target curriculum.' },
     result: { zh: '获得新加坡国立大学城市规划相关硕士项目录取。', en: 'Received an offer for an urban-planning-related master’s programme at NUS.' },
+    evidenceBasis: { zh: '来源：历史匿名案例摘要及归档录取信；网站保留原始材料中的年份口径差异。', en: 'Basis: archived anonymised summary and offer letter; the website preserves the year discrepancy in the source materials.' },
   },
   {
     id: 'late-cycle-recovery', year: '2019', category: 'complex',
     categoryLabel: { zh: '特殊背景', en: 'Complex profile' },
     title: { zh: '延毕与晚申请窗口下的风险重排', en: 'Reordering risk in a late-cycle application after delayed graduation' },
+    discipline: { zh: '电子工程相关方向', en: 'Electronics-related engineering' },
+    level: { zh: '授课型硕士', en: 'Taught master’s' },
+    timeline: { zh: '2019 年秋季入学；4 月中旬取得结果', en: 'Autumn 2019 intake; outcome received in mid-April' },
+    serviceScope: { zh: '学业时间线说明、晚轮次选校、材料并行与风险管理', en: 'Academic timeline explanation, late-cycle selection, parallel materials and risk management' },
     profile: { zh: '211 本科；加权约 82；雅思 6.5；存在延毕经历，申请启动较晚。', en: 'Chinese 211 university; average around 82; IELTS 6.5; delayed graduation and a late application start.' },
     challenge: { zh: '需要同时解释学业节奏、控制时间风险，并在较短窗口内形成可提交材料。', en: 'The application needed to explain the academic timeline, control schedule risk and produce coherent materials quickly.' },
     strategy: { zh: '优先处理时间线与事实说明，再以工程课程基础和目标专业匹配支撑申请，采用并行材料管理。', en: 'Prioritised the timeline explanation, then supported fit through engineering coursework and parallel material management.' },
     result: { zh: '在申请季后段获得南洋理工大学电子相关硕士项目录取。', en: 'Received an offer for an electronics-related master’s programme at NTU late in the cycle.' },
+    evidenceBasis: { zh: '来源：历史公司介绍中的匿名案例摘要；不公开个人身份和申请文件。', en: 'Basis: anonymised case summary in the archived company profile; identity and application files are not published.' },
   },
 ];
 

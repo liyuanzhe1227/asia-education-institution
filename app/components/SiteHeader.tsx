@@ -8,11 +8,11 @@ import { assetPath } from '../lib/site-data';
 
 const menus = [
   {
-    href: '/services/', zh: '服务中心', en: 'Services',
+    href: '/services/', zh: '个人成长服务', en: 'Personal Services',
     children: [
-      ['/services/#admissions', '升学与申请', 'Admissions'],
-      ['/services/#research', '学术与研究', 'Academic & Research'],
-      ['/services/#career', '职业与人才', 'Career & Talent'],
+      ['/services/admissions/', '升学与申请', 'Admissions'],
+      ['/services/research/', '学术与研究发展', 'Academic & Research'],
+      ['/services/career/', '职业与人才发展', 'Career & Talent'],
     ],
   },
   {
@@ -21,31 +21,33 @@ const menus = [
       ['/cases/#overview', '申请数量', 'Application Data'],
       ['/cases/#year-analysis', '年度项目分析', 'Annual Analysis'],
       ['/cases/#analysis', '匿名案例分析', 'Case Analysis'],
-      ['/cases/#outcomes', '录取方向', 'Outcome Areas'],
+      ['/evidence/', '证据与透明度', 'Evidence & Transparency'],
     ],
   },
   {
-    href: '/programmes/', zh: '国际项目', en: 'Programmes',
+    href: '/programmes/', zh: '国际游学项目', en: 'Study Programmes',
     children: [
-      ['/programmes/#immersion', '全真课堂', 'Immersion'],
-      ['/programmes/#internship', '短期实习', 'Internships'],
-      ['/programmes/#executive', '机构研修', 'Executive Visits'],
+      ['/programmes/immersion/', '全真课堂', 'Immersion'],
+      ['/programmes/internships/', '短期实习', 'Internships'],
     ],
   },
   {
-    href: '/partnerships/', zh: '院校合作', en: 'Partnerships',
+    href: '/partnerships/', zh: '院校与机构合作', en: 'Institutions',
     children: [
       ['/partnerships/#models', '合作模式', 'Models'],
       ['/partnerships/#experience', '过往经验', 'Experience'],
       ['/partnerships/#process', '合作流程', 'Process'],
+      ['/partnerships/training/', '机构培训与研修', 'Institutional Training'],
     ],
   },
   {
     href: '/about/', zh: '关于 AEI', en: 'About AEI',
     children: [
       ['/about/#profile', '机构简介', 'Profile'],
+      ['/about/#registry', '注册信息', 'Registration'],
+      ['/about/#team', '责任团队', 'Accountability'],
       ['/about/#principles', '服务原则', 'Principles'],
-      ['/about/#contact', '联系 AEI', 'Contact'],
+      ['/about/#consultation', '预约咨询', 'Consultation'],
     ],
   },
 ];
@@ -89,6 +91,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="lux-actions">
+          <Link className="header-consult" href="/about/#consultation">{lang === 'zh' ? '咨询' : 'Consult'}</Link>
           <button type="button" onClick={shareSite}>{shareLabel}</button>
           <button type="button" onClick={toggleLanguage}>{lang === 'zh' ? 'EN' : '中文'}</button>
           <button className="menu-toggle" type="button" onClick={() => setMobileOpen(!mobileOpen)} aria-expanded={mobileOpen} aria-label={lang === 'zh' ? '菜单' : 'Menu'}>{mobileOpen ? '×' : '≡'}</button>

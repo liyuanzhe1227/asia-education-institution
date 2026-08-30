@@ -41,6 +41,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       programmes: { zh: '国际学习项目｜AEI', en: 'Global Programmes | AEI' },
       partnerships: { zh: '院校与科研合作｜AEI', en: 'Institutional Partnerships | AEI' },
       about: { zh: '关于 AEI｜亚瑟（新加坡）教育学院', en: 'About AEI | Asia Education Institution' },
+      admissions: { zh: '升学与申请｜AEI', en: 'Admissions & Pathways | AEI' },
+      research: { zh: '学术与研究发展｜AEI', en: 'Academic & Research Development | AEI' },
+      career: { zh: '职业与人才发展｜AEI', en: 'Career & Talent Development | AEI' },
+      immersion: { zh: '新加坡全真课堂｜AEI', en: 'Singapore Immersion Classroom | AEI' },
+      internships: { zh: '海外短期实习｜AEI', en: 'International Short Internship | AEI' },
+      training: { zh: '机构培训与研修｜AEI', en: 'Institutional Training | AEI' },
+      evidence: { zh: '证据与透明度｜AEI', en: 'Evidence & Transparency | AEI' },
+      privacy: { zh: '隐私与网站说明｜AEI', en: 'Privacy & Website Notice | AEI' },
     };
     document.title = titles[page]?.[lang] ?? titles.home[lang];
   }, [lang]);

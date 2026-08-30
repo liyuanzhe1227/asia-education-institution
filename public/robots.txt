@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://liyuanzhe1227.github.io/asia-education-institution/sitemap.xml

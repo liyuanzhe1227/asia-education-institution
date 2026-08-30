@@ -1,3 +1,3 @@
 import type { Metadata } from 'next';
-export const metadata: Metadata = { title: '服务中心', description: 'AEI 六条业务路径：升学申请、学术研究、国际项目、院校合作、职业人才与机构培训。' };
+export const metadata: Metadata = { title: '个人成长服务', description: 'AEI 升学申请、学术研究与职业人才三条个人成长服务路径。', alternates: { canonical: '/services/' } };
 export default function ServicesLayout({ children }: { children: React.ReactNode }) { return children; }

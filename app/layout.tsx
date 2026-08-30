@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     template: '%s | AEI',
   },
   description: '立足新加坡的升学申请、研究发展、国际学习项目与院校合作平台。',
+  keywords: ['AEI', 'Asia Education Institution', '新加坡教育', '硕士申请', '博士申请', '国际游学', '院校合作'],
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'AEI｜连接教育、研究与发展机遇',
     description: '面向学生、研究者、院校与机构的六条完整业务路径。',
@@ -37,6 +40,15 @@ export default function RootLayout({
   return (
     <html lang="zh-Hans">
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'EducationalOrganization',
+          name: 'Asia Education Institution Pte. Ltd.', alternateName: 'AEI',
+          identifier: 'UEN 201510068D', foundingDate: '2015-04-15',
+          url: 'https://liyuanzhe1227.github.io/asia-education-institution/',
+          email: 'eric2015aei@gmail.com', telephone: '+65 8626 7896',
+          address: { '@type': 'PostalAddress', streetAddress: '732 Tampines Street 71, #02-111', addressLocality: 'Singapore', postalCode: '520732', addressCountry: 'SG' },
+          sameAs: ['https://www.instagram.com/asiaeducationinstitution/'],
+        }) }} />
         <LanguageProvider>
           <SiteHeader />
           {children}
