@@ -93,6 +93,16 @@ export const serviceGroups = [
       { zh: '工程生产力、创新与领导力', en: 'Productivity, innovation and leadership' },
     ],
   },
+  {
+    number: '07', slug: 'mobility',
+    title: { zh: '全球流动与身份规划', en: 'Global Mobility & Status Planning' },
+    summary: { zh: '围绕签证、永居、公民身份与全球人才项目，比较国家路径并组织可核验材料。', en: 'Comparing country pathways and organising verifiable evidence for visas, permanent residence, citizenship and global talent programmes.' },
+    items: [
+      { zh: '多国家路径初步比较', en: 'Preliminary multi-country pathway comparison' },
+      { zh: '人才、永居与公民申请证据规划', en: 'Evidence planning for talent, residence and citizenship' },
+      { zh: '持牌律师与注册代理协同', en: 'Coordination with licensed counsel and registered advisers' },
+    ],
+  },
 ];
 
 export type DetailedCase = {

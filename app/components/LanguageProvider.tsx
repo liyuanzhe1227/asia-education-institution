@@ -49,6 +49,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       training: { zh: '机构培训与研修｜AEI', en: 'Institutional Training | AEI' },
       evidence: { zh: '证据与透明度｜AEI', en: 'Evidence & Transparency | AEI' },
       privacy: { zh: '隐私与网站说明｜AEI', en: 'Privacy & Website Notice | AEI' },
+      mobility: { zh: '签证、永居与身份规划｜AEI', en: 'Visa, Residence & Citizenship | AEI' },
     };
     document.title = titles[page]?.[lang] ?? titles.home[lang];
   }, [lang]);

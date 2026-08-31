@@ -10,7 +10,7 @@ export default function Home() {
   const tr = (zh: string, en: string) => lang === 'zh' ? zh : en;
   const serviceHref: Record<string, string> = {
     admissions: '/services/admissions/', research: '/services/research/', career: '/services/career/',
-    global: '/programmes/', partnerships: '/partnerships/', executive: '/partnerships/training/',
+    global: '/programmes/', partnerships: '/partnerships/', executive: '/partnerships/training/', mobility: '/mobility/',
   };
 
   return (
@@ -37,7 +37,7 @@ export default function Home() {
       </section>
 
       <section className="editorial-section home-services">
-        <div className="editorial-heading"><p>01 / {tr('业务体系', 'PATHWAYS')}</p><h2>{tr('六条业务线，\n一个完整成长系统', 'Six pathways.\nOne connected system.')}</h2><Link href="/services/">{tr('查看全部服务', 'Explore all services')} →</Link></div>
+        <div className="editorial-heading"><p>01 / {tr('业务体系', 'PATHWAYS')}</p><h2>{tr('七条业务线，\n一个完整成长系统', 'Seven pathways.\nOne connected system.')}</h2><Link href="/services/">{tr('查看服务架构', 'Explore the service architecture')} →</Link></div>
         <div className="service-mosaic">
           {serviceGroups.map((service) => <Link id={service.slug} key={service.number} href={serviceHref[service.slug]}><span>{service.number}</span><small>{tr(`第 ${service.number} 条业务线`, `PATHWAY ${service.number}`)}</small><h3>{lang === 'zh' ? service.title.zh : service.title.en}</h3><p>{lang === 'zh' ? service.summary.zh : service.summary.en}</p><b>↗</b></Link>)}
         </div>

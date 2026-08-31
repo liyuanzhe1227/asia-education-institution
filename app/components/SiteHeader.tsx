@@ -41,6 +41,15 @@ const menus = [
     ],
   },
   {
+    href: '/mobility/', zh: '签证与身份', en: 'Mobility',
+    children: [
+      ['/mobility/#scope', '业务范围', 'Service Scope'],
+      ['/mobility/#destinations', '国家与地区', 'Destinations'],
+      ['/mobility/#talent', '人才项目', 'Talent Programmes'],
+      ['/mobility/#citizenship', '永居与公民身份', 'Residence & Citizenship'],
+    ],
+  },
+  {
     href: '/about/', zh: '关于 AEI', en: 'About AEI',
     children: [
       ['/about/#profile', '机构简介', 'Profile'],
