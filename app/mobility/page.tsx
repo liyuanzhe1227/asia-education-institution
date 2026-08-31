@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useLanguage } from '../components/LanguageProvider';
 
 const destinations = [
@@ -112,7 +111,7 @@ export default function MobilityPage() {
   const { lang } = useLanguage();
   const tr = (zh: string, en: string) => lang === 'zh' ? zh : en;
   return <main>
-    <section className="mobility-hero"><p>{tr('07 / 全球流动与身份规划', '07 / GLOBAL MOBILITY & STATUS PLANNING')}</p><h1>{tr('签证、永居与\n人才身份规划', 'Visa, residence &\ntalent pathways')}</h1><div><strong>{tr('先比较路径，再准备证据；先确认资格，再进入申请。', 'Compare pathways before building evidence; confirm eligibility before applying.')}</strong><span>{tr('覆盖学习、工作、家庭、人才、永居与公民身份的初步路径分析。各国制度持续变化，页面仅作为服务导航，实际申请以主管机关最新规则及持牌专业意见为准。', 'Preliminary pathway analysis across study, work, family, talent, permanent residence and citizenship. Rules change frequently; this page is a service guide, and applications must follow current authority rules and licensed professional advice.')}</span><Link href="/about/#consultation">{tr('预约身份路径初评', 'Request a pathway review')} ↗</Link></div></section>
+    <section className="mobility-hero"><p>{tr('07 / 全球流动与身份规划', '07 / GLOBAL MOBILITY & STATUS PLANNING')}</p><h1>{tr('签证、永居与\n人才身份规划', 'Visa, residence &\ntalent pathways')}</h1><div><strong>{tr('先比较路径，再准备证据；先确认资格，再进入申请。', 'Compare pathways before building evidence; confirm eligibility before applying.')}</strong><span>{tr('覆盖学习、工作、家庭、人才、永居与公民身份的初步路径分析。各国制度持续变化，页面仅作为服务导航，实际申请以主管机关最新规则及持牌专业意见为准。', 'Preliminary pathway analysis across study, work, family, talent, permanent residence and citizenship. Rules change frequently; this page is a service guide, and applications must follow current authority rules and licensed professional advice.')}</span><a href="/about/#consultation">{tr('预约身份路径初评', 'Request a pathway review')} ↗</a></div></section>
 
     <section className="mobility-scope" id="scope"><div><p>{tr('业务范围', 'SERVICE SCOPE')}</p><h2>{tr('从临时签证，\n到长期身份。', 'From temporary permission\nto long-term status.')}</h2></div><div>{[
       [tr('签证与准证', 'Visas & permits'), tr('学习、工作、家属、创业与短期活动路径比较。', 'Compare study, work, dependant, founder and short-term activity routes.')],
@@ -135,6 +134,6 @@ export default function MobilityPage() {
 
     <section className="mobility-boundary" id="citizenship"><div><p>{tr('服务边界', 'SERVICE BOUNDARIES')}</p><h2>{tr('身份申请需要更清晰的责任边界。', 'Immigration work requires clearer accountability.')}</h2></div><div><article><h3>{tr('AEI 可以提供', 'AEI can provide')}</h3><ul><li>{tr('初步路径比较与目标梳理', 'Preliminary pathway comparison and goal clarification')}</li><li>{tr('材料清单、证据地图与项目时间表', 'Document checklist, evidence map and project timeline')}</li><li>{tr('履历、研究、职业与成果材料的事实整理', 'Factual organisation of career, research and achievement evidence')}</li><li>{tr('翻译、公证及持牌专业人士的协调', 'Coordination with translators, notaries and licensed professionals')}</li></ul></article><article><h3>{tr('AEI 不承诺或替代', 'AEI does not promise or replace')}</h3><ul><li>{tr('不保证签证、永居、公民身份或人才项目获批', 'No guarantee of visa, permanent residence, citizenship or talent approval')}</li><li>{tr('不替代政府机关进行资格判断', 'No substitution for an authority’s eligibility decision')}</li><li>{tr('不在需要牌照的法域冒充移民律师或注册代理', 'No acting as a lawyer or registered migration adviser where licensing is required')}</li><li>{tr('不隐瞒拒签、犯罪、健康、资金或身份历史', 'No concealment of refusals, criminal, health, financial or status history')}</li></ul></article></div></section>
 
-    <section className="page-cta"><p>{tr('国家、身份和时间都还不确定？', 'Unsure about destination, status or timing?')}</p><h2>{tr('先做一份跨国家路径比较。', 'Start with a cross-country pathway comparison.')}</h2><Link href="/about/#consultation">{tr('提交初步信息', 'Submit preliminary information')} ↗</Link></section>
+    <section className="page-cta"><p>{tr('国家、身份和时间都还不确定？', 'Unsure about destination, status or timing?')}</p><h2>{tr('先做一份跨国家路径比较。', 'Start with a cross-country pathway comparison.')}</h2><a href="/about/#consultation">{tr('提交初步信息', 'Submit preliminary information')} ↗</a></section>
   </main>;
 }

@@ -1,7 +1,6 @@
 'use client';
 /* eslint-disable @next/next/no-img-element */
 
-import Link from 'next/link';
 import { useLanguage } from './components/LanguageProvider';
 import { applicationYears, assetPath, caseMetrics, detailedCases, serviceGroups } from './lib/site-data';
 
@@ -21,7 +20,7 @@ export default function Home() {
           <p className="lux-kicker">{tr('新加坡 · 教育与国际合作', 'SINGAPORE · EDUCATION & GLOBAL CONNECTION')}</p>
           <h1>{tr('让每一种成长，\n都有清晰路径。', 'A clearer pathway\nfor every ambition.')}</h1>
           <p>{tr('从升学申请、学术研究到国际项目与院校合作，AEI 将复杂选择整理为可执行、可复盘的长期路径。', 'From admissions and research to global programmes and institutional partnerships, AEI turns complex choices into structured, reviewable pathways.')}</p>
-          <div className="lux-hero-actions"><Link className="solid-cta" href="/services/">{tr('进入服务中心', 'Explore services')}<span>↗</span></Link><Link className="line-cta" href="/cases/">{tr('查看匿名案例', 'View anonymised cases')}<span>→</span></Link></div>
+          <div className="lux-hero-actions"><a className="solid-cta" href="/services/">{tr('进入服务中心', 'Explore services')}<span>↗</span></a><a className="line-cta" href="/cases/">{tr('查看匿名案例', 'View anonymised cases')}<span>→</span></a></div>
         </div>
         <div className="lux-hero-art" aria-hidden="true">
           <div className="art-disc"><span>AEI</span><small>{tr('新加坡', 'SINGAPORE')}</small></div>
@@ -37,15 +36,15 @@ export default function Home() {
       </section>
 
       <section className="editorial-section home-services">
-        <div className="editorial-heading"><p>01 / {tr('业务体系', 'PATHWAYS')}</p><h2>{tr('七条业务线，\n一个完整成长系统', 'Seven pathways.\nOne connected system.')}</h2><Link href="/services/">{tr('查看服务架构', 'Explore the service architecture')} →</Link></div>
+        <div className="editorial-heading"><p>01 / {tr('业务体系', 'PATHWAYS')}</p><h2>{tr('七条业务线，\n一个完整成长系统', 'Seven pathways.\nOne connected system.')}</h2><a href="/services/">{tr('查看服务架构', 'Explore the service architecture')} →</a></div>
         <div className="service-mosaic">
-          {serviceGroups.map((service) => <Link id={service.slug} key={service.number} href={serviceHref[service.slug]}><span>{service.number}</span><small>{tr(`第 ${service.number} 条业务线`, `PATHWAY ${service.number}`)}</small><h3>{lang === 'zh' ? service.title.zh : service.title.en}</h3><p>{lang === 'zh' ? service.summary.zh : service.summary.en}</p><b>↗</b></Link>)}
+          {serviceGroups.map((service) => <a id={service.slug} key={service.number} href={serviceHref[service.slug]}><span>{service.number}</span><small>{tr(`第 ${service.number} 条业务线`, `PATHWAY ${service.number}`)}</small><h3>{lang === 'zh' ? service.title.zh : service.title.en}</h3><p>{lang === 'zh' ? service.summary.zh : service.summary.en}</p><b>↗</b></a>)}
         </div>
       </section>
 
       <section className="case-feature-home">
         <div className="case-feature-image"><img src={assetPath('learning-room.jpg')} alt={tr('AEI 学习项目', 'AEI learning programme')} /><span>{tr('案例中心 / 01', 'CASE LIBRARY / 01')}</span></div>
-        <div className="case-feature-copy"><p>02 / {tr('案例中心', 'CASE LIBRARY')}</p><h2>{tr('不只展示结果，\n更解释路径。', 'Beyond outcomes:\nwe explain the pathway.')}</h2><p>{tr('案例采用匿名处理，拆解背景、核心挑战、策略选择与最终结果。所有数量均区分“服务档案”与“结果证据”，不以模糊成功率替代事实。', 'Cases are anonymised and structured around profile, challenge, strategy and outcome. Service records and outcome evidence are reported separately—never blurred into an unsupported success rate.')}</p><div className="case-mini-list">{detailedCases.slice(0, 3).map((item) => <div key={item.id}><span>{item.year}</span><strong>{lang === 'zh' ? item.title.zh : item.title.en}</strong><small>{lang === 'zh' ? item.categoryLabel.zh : item.categoryLabel.en}</small></div>)}</div><Link className="solid-cta orange" href="/cases/">{tr('进入案例数据库', 'Enter the case library')} <span>↗</span></Link></div>
+        <div className="case-feature-copy"><p>02 / {tr('案例中心', 'CASE LIBRARY')}</p><h2>{tr('不只展示结果，\n更解释路径。', 'Beyond outcomes:\nwe explain the pathway.')}</h2><p>{tr('案例采用匿名处理，拆解背景、核心挑战、策略选择与最终结果。所有数量均区分“服务档案”与“结果证据”，不以模糊成功率替代事实。', 'Cases are anonymised and structured around profile, challenge, strategy and outcome. Service records and outcome evidence are reported separately—never blurred into an unsupported success rate.')}</p><div className="case-mini-list">{detailedCases.slice(0, 3).map((item) => <div key={item.id}><span>{item.year}</span><strong>{lang === 'zh' ? item.title.zh : item.title.en}</strong><small>{lang === 'zh' ? item.categoryLabel.zh : item.categoryLabel.en}</small></div>)}</div><a className="solid-cta orange" href="/cases/">{tr('进入案例数据库', 'Enter the case library')} <span>↗</span></a></div>
       </section>
 
       <section className="editorial-section data-section">
@@ -56,7 +55,7 @@ export default function Home() {
 
       <section className="image-led-section">
         <img src={assetPath('scu-ntu-summer.jpg')} alt={tr('AEI 历史暑期学习项目', 'Past AEI summer learning programme')} />
-        <div><p>04 / {tr('国际项目与院校合作', 'GLOBAL PROGRAMMES & PARTNERSHIPS')}</p><h2>{tr('从一次交流，走向长期合作。', 'From one exchange to enduring collaboration.')}</h2><p>{tr('短期营训、校园浸润、研究互访、联合培养与合作备忘录协调，均以目标、资源、责任和正式确认为边界。', 'Short programmes, campus immersion, research exchange, joint pathways and MoU coordination—defined by objectives, resources, responsibilities and formal confirmation.')}</p><div><Link href="/programmes/">{tr('国际项目', 'Programmes')} ↗</Link><Link href="/partnerships/">{tr('院校合作', 'Partnerships')} ↗</Link></div></div>
+        <div><p>04 / {tr('国际项目与院校合作', 'GLOBAL PROGRAMMES & PARTNERSHIPS')}</p><h2>{tr('从一次交流，走向长期合作。', 'From one exchange to enduring collaboration.')}</h2><p>{tr('短期营训、校园浸润、研究互访、联合培养与合作备忘录协调，均以目标、资源、责任和正式确认为边界。', 'Short programmes, campus immersion, research exchange, joint pathways and MoU coordination—defined by objectives, resources, responsibilities and formal confirmation.')}</p><div><a href="/programmes/">{tr('国际项目', 'Programmes')} ↗</a><a href="/partnerships/">{tr('院校合作', 'Partnerships')} ↗</a></div></div>
       </section>
     </main>
   );

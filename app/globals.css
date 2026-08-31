@@ -3,9 +3,9 @@
 :root {
   --ink: #2b211d;
   --brown: #4a2c22;
-  --orange: #c9572d;
-  --orange-deep: #a94325;
-  --terracotta: #9b4a32;
+  --orange: #df8659;
+  --orange-deep: #b85d39;
+  --terracotta: #bd6b4e;
   --cream: #f3ede3;
   --ivory: #fffaf2;
   --sand: #e4d7c7;
@@ -145,8 +145,8 @@ h1, h2, h3, p { margin-top: 0; }
 .inner-hero > div { align-self: end; padding-top: 18px; border-top: 1px solid rgba(43,33,29,.35); }
 .inner-hero > div strong { display: block; margin-bottom: 13px; font-size: 13px; }
 .inner-hero > div span { display: block; font-size: 12px; line-height: 1.8; }
-.case-hero { background: #b75231; color: #fff4e9; }
-.programme-hero { background: #d2703f; }
+.case-hero { background: #d97850; color: var(--ink); }
+.programme-hero { background: #e29162; }
 .partnership-hero { background: var(--brown); color: #f7e9df; }
 .about-hero { background: #d6a766; }
 
@@ -367,7 +367,7 @@ h1, h2, h3, p { margin-top: 0; }
 .consultation-form button { justify-self: start; padding: 14px 18px; border: 0; background: var(--orange); font-size: 10px; font-weight: 700; cursor: pointer; }
 .consultation-form > small { color: var(--muted); font-size: 8px; line-height: 1.6; }
 
-.evidence-hero { background: #b95531; color: #fff4e9; }
+.evidence-hero { background: #d97850; color: var(--ink); }
 .registry-section, .methodology-section, .external-traces { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; padding: 100px clamp(24px, 7vw, 112px); background: var(--ivory); }
 .methodology-section { background: var(--ink); color: white; }
 .methodology-section > div:first-child > p { color: var(--gold); }
@@ -392,7 +392,7 @@ h1, h2, h3, p { margin-top: 0; }
 .policy-content h2 { margin: 0 0 15px; font: 500 28px Georgia, "Microsoft YaHei", serif; }
 .policy-content p { margin: 0; max-width: 850px; color: var(--muted); font-size: 12px; line-height: 1.9; }
 
-.mobility-hero { min-height: 680px; display: grid; grid-template-columns: 1.15fr .85fr; align-content: end; gap: 7vw; padding: 100px clamp(24px, 7vw, 112px) 85px; background: linear-gradient(125deg, #bc4b27 0%, var(--orange) 58%, #dd8a50 100%); color: #251b17; }
+.mobility-hero { min-height: 680px; display: grid; grid-template-columns: 1.15fr .85fr; align-content: end; gap: 7vw; padding: 100px clamp(24px, 7vw, 112px) 85px; background: linear-gradient(125deg, #d87448 0%, var(--orange) 58%, #f1b184 100%); color: #251b17; }
 .mobility-hero > p { grid-column: 1 / -1; margin-bottom: -38px; font: 700 9px Arial, sans-serif; letter-spacing: .045em; }
 .mobility-hero h1 { margin: 0; white-space: pre-line; font: 500 clamp(58px, 7vw, 105px)/.96 Georgia, "Microsoft YaHei", serif; letter-spacing: -.055em; }
 .mobility-hero > div { align-self: end; display: grid; gap: 17px; padding-top: 20px; border-top: 1px solid rgba(43,33,29,.45); }

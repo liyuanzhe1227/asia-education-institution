@@ -1,7 +1,6 @@
 'use client';
 /* eslint-disable @next/next/no-img-element */
 
-import Link from 'next/link';
 import { useState } from 'react';
 import { useLanguage } from './LanguageProvider';
 import { assetPath } from '../lib/site-data';
@@ -84,28 +83,28 @@ export function SiteHeader() {
         <div><a href="mailto:eric2015aei@gmail.com">eric2015aei@gmail.com</a><a href="tel:+6586267896">+65 8626 7896</a></div>
       </div>
       <header className="lux-header">
-        <Link className="lux-brand" href="/" aria-label={lang === 'zh' ? '亚瑟（新加坡）教育学院首页' : 'Asia Education Institution home'}>
+        <a className="lux-brand" href="/" aria-label={lang === 'zh' ? '亚瑟（新加坡）教育学院首页' : 'Asia Education Institution home'}>
           <img src={assetPath('aei-mark.jpg')} alt={lang === 'zh' ? '亚瑟（新加坡）教育学院' : 'Asia Education Institution'} />
-        </Link>
+        </a>
         <nav className="desktop-nav" aria-label={lang === 'zh' ? '主导航' : 'Primary navigation'}>
           {menus.map((menu) => (
             <div className="nav-group" key={menu.href}>
-              <Link href={menu.href}>{lang === 'zh' ? menu.zh : menu.en}<span>⌄</span></Link>
+              <a href={menu.href}>{lang === 'zh' ? menu.zh : menu.en}<span>⌄</span></a>
               <div className="submenu">
                 <small>{lang === 'zh' ? `${menu.zh}导航` : `${menu.en} navigation`}</small>
-                {menu.children.map(([href, zh, en], index) => <Link key={href} href={href}><b>0{index + 1}</b>{lang === 'zh' ? zh : en}<span>→</span></Link>)}
+                {menu.children.map(([href, zh, en], index) => <a key={href} href={href}><b>0{index + 1}</b>{lang === 'zh' ? zh : en}<span>→</span></a>)}
               </div>
             </div>
           ))}
         </nav>
         <div className="lux-actions">
-          <Link className="header-consult" href="/about/#consultation">{lang === 'zh' ? '咨询' : 'Consult'}</Link>
+          <a className="header-consult" href="/about/#consultation">{lang === 'zh' ? '咨询' : 'Consult'}</a>
           <button type="button" onClick={shareSite}>{shareLabel}</button>
           <button type="button" onClick={toggleLanguage}>{lang === 'zh' ? 'EN' : '中文'}</button>
           <button className="menu-toggle" type="button" onClick={() => setMobileOpen(!mobileOpen)} aria-expanded={mobileOpen} aria-label={lang === 'zh' ? '菜单' : 'Menu'}>{mobileOpen ? '×' : '≡'}</button>
         </div>
       </header>
-      {mobileOpen && <div className="mobile-menu">{menus.map((menu) => <details key={menu.href}><summary>{lang === 'zh' ? menu.zh : menu.en}</summary>{menu.children.map(([href, zh, en]) => <Link key={href} href={href} onClick={() => setMobileOpen(false)}>{lang === 'zh' ? zh : en}<span>→</span></Link>)}</details>)}</div>}
+      {mobileOpen && <div className="mobile-menu">{menus.map((menu) => <details key={menu.href}><summary>{lang === 'zh' ? menu.zh : menu.en}</summary>{menu.children.map(([href, zh, en]) => <a key={href} href={href} onClick={() => setMobileOpen(false)}>{lang === 'zh' ? zh : en}<span>→</span></a>)}</details>)}</div>}
     </>
   );
 }
