@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-Hans">
+    <html lang="zh-Hans" data-lang="zh">
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org', '@type': 'EducationalOrganization',
@@ -46,7 +46,7 @@ export default function RootLayout({
           identifier: 'UEN 201510068D', foundingDate: '2015-04-15',
           url: 'https://liyuanzhe1227.github.io/asia-education-institution/',
           email: 'eric2015aei@gmail.com', telephone: '+65 8626 7896',
-          address: { '@type': 'PostalAddress', streetAddress: '732 Tampines Street 71, #02-111', addressLocality: 'Singapore', postalCode: '520732', addressCountry: 'SG' },
+          address: { '@type': 'PostalAddress', streetAddress: '732 Tampines Street 71', addressLocality: 'Singapore', postalCode: '520732', addressCountry: 'SG' },
           sameAs: ['https://www.instagram.com/asiaeducationinstitution/'],
         }) }} />
         <LanguageProvider>

@@ -54,6 +54,24 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     document.title = titles[page]?.[lang] ?? titles.home[lang];
   }, [lang]);
 
+  useEffect(() => {
+    function scrollToCurrentHash() {
+      const id = window.location.hash.slice(1);
+      if (!id) return;
+      const target = document.getElementById(decodeURIComponent(id));
+      if (target) target.scrollIntoView({ block: 'start' });
+    }
+
+    const timers = [180, 700, 1500].map((delay) => window.setTimeout(scrollToCurrentHash, delay));
+    window.addEventListener('load', scrollToCurrentHash);
+    window.addEventListener('hashchange', scrollToCurrentHash);
+    return () => {
+      timers.forEach((timer) => window.clearTimeout(timer));
+      window.removeEventListener('load', scrollToCurrentHash);
+      window.removeEventListener('hashchange', scrollToCurrentHash);
+    };
+  }, []);
+
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
 

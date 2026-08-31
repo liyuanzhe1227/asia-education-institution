@@ -593,4 +593,176 @@ h1, h2, h3, p { margin-top: 0; }
   .talent-evidence li p { grid-column: 2; }
 }
 
+/* Readability and mobile refinement layer */
+html[data-lang="zh"] body,
+html[data-lang="zh"] button,
+html[data-lang="zh"] input,
+html[data-lang="zh"] textarea { font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif; }
+html[data-lang="zh"] h1,
+html[data-lang="zh"] h2,
+html[data-lang="zh"] h3 { font-family: "Microsoft YaHei", "微软雅黑", Arial, sans-serif !important; font-weight: 600 !important; letter-spacing: -.035em !important; }
+html[data-lang="en"] h1,
+html[data-lang="en"] h2,
+html[data-lang="en"] h3 { letter-spacing: -.035em; }
+
+.lux-header { height: 88px; }
+.lux-brand { min-width: 76px; }
+.lux-brand img { width: 76px; height: 76px; border-radius: 0; object-fit: contain; }
+.desktop-nav, .nav-group > a { height: 88px; }
+.nav-group > a { font-size: 13px; }
+.lux-actions button, .lux-actions .header-consult { min-height: 44px; font-size: 11px; }
+.utility-bar { font-size: 10px; }
+
+.lux-hero h1 { font-size: clamp(54px, 6.5vw, 88px); }
+.inner-hero h1 { font-size: clamp(54px, 7vw, 88px); }
+.mobility-hero h1 { font-size: clamp(52px, 6.4vw, 84px); }
+.editorial-heading h2, .case-feature-copy h2, .image-led-section h2,
+.delivery-model h2, .programme-design h2, .partnership-process h2, .principle-section h2,
+.case-data-title h2, .case-library-header h2, .outcome-intro h2, .programme-lead h2, .partnership-experience h2, .about-profile h2, .contact-panel h2,
+.detail-audience h2, .detail-process h2, .detail-section-heading h2, .detail-faq h2, .about-registry h2, .team-section h2, .consultation-section h2, .registry-section h2, .methodology-section h2, .external-traces h2,
+.mobility-scope h2, .destination-heading h2, .talent-evidence h2, .mobility-boundary h2,
+.year-insight-heading h2, .page-cta h2 { font-size: clamp(36px, 4vw, 58px); }
+
+.inner-hero > p, .mobility-hero > p, .hero-index, .lux-kicker,
+.editorial-heading > p:first-child, .case-feature-copy > p:first-child, .image-led-section > div > p:first-child,
+.case-data-title > p, .case-library-header > div > p, .outcome-intro > p, .programme-lead > div > p, .partnership-experience > div > p, .about-profile > div > p, .contact-panel > p,
+.detail-audience > div > p, .detail-process > div:first-child > p, .detail-section-heading > p, .detail-faq > div > p, .about-registry > div > p, .team-section > div:first-child > p, .consultation-section > div > p, .registry-section > div > p, .methodology-section > div:first-child > p, .external-traces > div:first-child > p,
+.mobility-scope > div:first-child > p, .destination-heading > p, .talent-evidence > div > p, .mobility-boundary > div:first-child > p { font-size: 10px; }
+
+.inner-hero > div span, .mobility-hero span, .heading-note,
+.case-data-title > span, .outcome-intro > span, .year-insight-heading > span,
+.destination-heading > span, .about-registry > div > span, .team-section > div:first-child > span,
+.consultation-section > div > span, .registry-section > div > span { font-size: 13px; line-height: 1.85; }
+
+.lux-hero, .image-led-section, .inner-hero, .programme-design,
+.institutional-training-cta, .contact-panel, .mobility-hero, .page-cta,
+.period-totals .total, .year-insight-grid article:first-child,
+.year-insight-grid article:nth-child(6), .year-insight-grid article:last-child,
+.destination-grid article:first-child, .destination-grid article:last-child,
+.mobility-boundary article:last-child { color: #2b1e19; }
+.mobility-hero span, .institutional-training-cta > span,
+.destination-grid article:first-child > p, .destination-grid article:last-child > p,
+.mobility-boundary article:last-child li,
+.year-insight-grid article:first-child p, .year-insight-grid article:nth-child(6) p, .year-insight-grid article:last-child p { color: #432a21; }
+.page-cta a, .mobility-hero a, .institutional-training-cta > a { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; }
+
+.case-metrics strong { font-size: 50px; line-height: 1; }
+.case-metrics p { font-size: 12px; line-height: 1.6; }
+.archive-band strong { font-size: clamp(34px, 3.3vw, 48px); }
+.archive-band small, .archive-band span { font-size: 11px; }
+.period-totals strong, .year-insight-grid article > div strong { font-size: 40px; }
+.period-totals span, .year-insight-grid article > div small { font-size: 10px; }
+
+.about-profile, .about-registry, .about-timeline, .team-section,
+.principle-section, .contact-panel, .consultation-section { scroll-margin-top: 0; }
+.about-registry { background: #e9dece; }
+.about-timeline { padding-top: 100px; background: var(--ivory); }
+.principle-section { background: #f0e8dc; }
+.consultation-section { background: #f7f0e6; }
+.about-timeline p, .team-section article p, .principle-section article p,
+.mobility-scope article p, .destination-grid > article > p,
+.talent-evidence li p, .mobility-boundary li { font-size: 12px; }
+.about-registry dd, .registry-section dd { font-size: 12px; }
+.about-registry dt, .registry-section dt { font-size: 10px; }
+
+.segmented-field { min-width: 0; margin: 0; padding: 0; border: 0; }
+.segmented-field legend { margin-bottom: 9px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .03em; }
+.segment-options { display: grid; gap: 8px; }
+.audience-options { grid-template-columns: repeat(3, 1fr); }
+.service-options { grid-template-columns: repeat(3, 1fr); }
+.segment-option { position: relative; display: block !important; color: var(--ink) !important; font-size: 11px !important; font-weight: 500 !important; letter-spacing: 0 !important; cursor: pointer; }
+.segment-option input { position: absolute; opacity: 0; pointer-events: none; }
+.segment-option span { min-height: 48px; display: flex; align-items: center; justify-content: center; padding: 10px 12px; border: 1px solid var(--line); background: white; text-align: center; line-height: 1.45; transition: background .18s, border-color .18s, color .18s; }
+.segment-option input:checked + span { border-color: var(--orange-deep); background: var(--orange); color: #2b1e19; box-shadow: inset 0 0 0 1px var(--orange-deep); }
+.segment-option input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+.consultation-form label { font-size: 10px; }
+.consultation-form input:not([type="checkbox"]), .consultation-form select, .consultation-form textarea { min-height: 48px; font-size: 13px; }
+.consultation-form button { min-height: 48px; padding: 14px 20px; background: var(--ink); color: white; font-size: 12px; }
+.consultation-form > small { font-size: 10px; }
+
+.footer-logo img { width: 82px; height: 82px; object-fit: contain; border-radius: 0; }
+.footer-links a { font-size: 12px; }
+.footer-links small, .footer-legal small { font-size: 10px; }
+.footer-legal p { color: #b9aba2; font-size: 11px; }
+
+@media (max-width: 800px) {
+  html { scroll-padding-top: 105px; }
+  .utility-bar { min-height: 32px; height: auto; padding-block: 8px; }
+  .lux-header { height: 78px; padding-inline: 18px; }
+  .lux-brand { min-width: 64px; }
+  .lux-brand img { width: 64px; height: 64px; }
+  .lux-actions { gap: 6px; }
+  .lux-actions button { min-width: 44px; padding: 8px 10px; }
+  .mobile-menu { top: 110px; max-height: calc(100vh - 110px); overflow-y: auto; }
+  .mobile-menu summary { min-height: 48px; font-size: 15px; }
+  .mobile-menu a { min-height: 44px; align-items: center; font-size: 13px; }
+
+  .lux-hero, .inner-hero, .mobility-hero { padding-left: 22px; padding-right: 22px; }
+  .mobility-hero { min-height: auto; align-content: start; padding-top: 72px; padding-bottom: 72px; }
+  .lux-hero h1 { font-size: clamp(42px, 12vw, 50px); line-height: 1.06; }
+  .inner-hero h1, .mobility-hero h1, .detail-hero h1 { font-size: clamp(40px, 11vw, 48px); line-height: 1.08; }
+  .editorial-heading h2, .case-feature-copy h2, .image-led-section h2,
+  .delivery-model h2, .programme-design h2, .partnership-process h2, .principle-section h2,
+  .case-data-title h2, .case-library-header h2, .outcome-intro h2, .programme-lead h2, .partnership-experience h2, .about-profile h2, .contact-panel h2,
+  .detail-audience h2, .detail-process h2, .detail-section-heading h2, .detail-faq h2, .about-registry h2, .team-section h2, .consultation-section h2, .registry-section h2, .methodology-section h2, .external-traces h2,
+  .mobility-scope h2, .destination-heading h2, .talent-evidence h2, .mobility-boundary h2,
+  .year-insight-heading h2, .page-cta h2 { font-size: clamp(32px, 9vw, 40px); line-height: 1.14; }
+
+  .about-profile > div, .about-registry, .team-section, .principle-section,
+  .contact-panel, .consultation-section, .mobility-scope, .destination-section,
+  .talent-evidence, .mobility-boundary { padding: 72px 22px; }
+  .about-profile > img { min-height: 340px; max-height: 420px; }
+  .about-profile, .about-registry, .about-timeline, .team-section,
+  .principle-section, .contact-panel, .consultation-section { scroll-margin-top: 0; }
+  .about-registry, .about-timeline, .team-section, .principle-section,
+  .contact-panel, .consultation-section { border-top: 10px solid rgba(43,33,29,.055); }
+
+  .about-timeline { display: block; padding: 70px 22px; }
+  .about-timeline > div, .about-timeline > div:nth-child(2), .about-timeline > div:nth-child(3), .about-timeline > div:nth-child(4), .about-timeline > div:last-child { min-height: 0; display: grid; grid-template-columns: 94px 1fr; gap: 16px; align-items: start; padding: 24px 0; border: 0; border-top: 1px solid var(--line); background: transparent; }
+  .about-timeline > div:last-child { border-bottom: 1px solid var(--line); }
+  .about-timeline span { font-size: 22px; line-height: 1.2; }
+  .about-timeline p { margin: 0; font-size: 13px; line-height: 1.75; }
+
+  .contact-panel > div { margin-top: 34px; }
+  .contact-panel > div a { min-height: 78px; padding: 18px; }
+  .contact-panel strong { font-size: 14px; overflow-wrap: anywhere; }
+  .contact-panel > span { font-size: 12px; }
+
+  .consultation-form { padding: 22px; gap: 20px; }
+  .audience-options, .service-options { grid-template-columns: 1fr 1fr; }
+  .consultation-form button { width: 100%; justify-self: stretch; }
+  .consultation-form .consent { min-height: 44px; align-items: center; font-size: 11px; }
+  .consultation-form .consent input { width: 20px; height: 20px; flex: 0 0 auto; }
+
+  .destination-grid article { min-height: 0; padding: 24px; }
+  .destination-grid > article > strong { margin-top: 36px; font-size: 14px; }
+  .destination-grid > article > p { font-size: 12px; }
+  .destination-grid a { min-height: 44px; display: inline-flex; align-items: center; font-size: 10px; }
+  .mobility-scope article { min-height: 210px; }
+  .mobility-scope article h3 { margin-top: 42px; }
+
+  .case-metrics { grid-template-columns: repeat(2, 1fr); }
+  .case-metrics article { min-height: 126px; }
+  .case-metrics strong { font-size: 42px; }
+  .archive-band { grid-template-columns: repeat(2, 1fr); }
+  .archive-band > div { min-height: 105px; padding: 20px 16px; }
+
+  .footer-lead { gap: 28px; padding-bottom: 42px; }
+  .footer-logo img { width: 74px; height: 74px; }
+  .footer-links { gap: 20px; }
+}
+
+@media (max-width: 430px) {
+  .utility-bar > div { gap: 12px; }
+  .lux-actions button:not(.menu-toggle) { min-width: 42px; }
+  .case-metrics { grid-template-columns: repeat(2, 1fr); }
+  .case-metrics article { padding: 18px 14px; }
+  .case-metrics strong { font-size: 38px; }
+  .case-metrics p { font-size: 11px; }
+  .archive-band { grid-template-columns: 1fr; }
+  .audience-options, .service-options { grid-template-columns: 1fr; }
+  .segment-option span { justify-content: flex-start; text-align: left; }
+  .footer-links { grid-template-columns: 1fr; }
+}
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }

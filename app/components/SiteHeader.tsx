@@ -85,8 +85,7 @@ export function SiteHeader() {
       </div>
       <header className="lux-header">
         <Link className="lux-brand" href="/" aria-label={lang === 'zh' ? '亚瑟（新加坡）教育学院首页' : 'Asia Education Institution home'}>
-          <img src={assetPath('aei-mark.jpg')} alt="" />
-          <span><strong>AEI</strong><small>{lang === 'zh' ? '亚瑟（新加坡）教育学院' : 'Asia Education Institution'}</small></span>
+          <img src={assetPath('aei-mark.jpg')} alt={lang === 'zh' ? '亚瑟（新加坡）教育学院' : 'Asia Education Institution'} />
         </Link>
         <nav className="desktop-nav" aria-label={lang === 'zh' ? '主导航' : 'Primary navigation'}>
           {menus.map((menu) => (

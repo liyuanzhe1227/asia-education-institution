@@ -28,6 +28,17 @@ const destinations = [
     ],
   },
   {
+    code: 'CN', zh: '中国大陆', en: 'Mainland China',
+    routesZh: '国内人才项目、回国发展、外国人来华工作与居留、外国人永久居留',
+    routesEn: 'Domestic talent programmes, returnee development, foreign work and residence, and permanent residence',
+    noteZh: '国内人才项目按国家、省市、园区及用人单位分别评估；外国人来华工作、居留与永久居留依据主管机关现行规则办理。',
+    noteEn: 'Domestic talent programmes are assessed at national, provincial, municipal, park and employer levels; foreign work, residence and permanent-residence matters follow current authority rules.',
+    links: [
+      ['https://s.nia.gov.cn/mps/bszy/wgrcrj/yjjl/201903/t20190313_1008.html', '永久居留服务指南 · 国家移民管理局', 'Permanent Residence Guide · NIA'],
+      ['https://s.nia.gov.cn/mps/main-cn.html', '政务服务平台 · 国家移民管理局', 'Government Services · NIA'],
+    ],
+  },
+  {
     code: 'UK', zh: '英国', en: 'United Kingdom',
     routesZh: 'Global Talent、Skilled Worker、永居与英国公民入籍',
     routesEn: 'Global Talent, Skilled Worker, indefinite leave to remain and British citizenship',
@@ -112,7 +123,7 @@ export default function MobilityPage() {
       [tr('材料与项目管理', 'Evidence & project management'), tr('建立文件清单、证据索引、翻译协调、时间表与版本记录。', 'Build checklists, evidence indexes, translation coordination, timelines and version records.')],
     ].map(([title, body], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{body}</p></article>)}</div></section>
 
-    <section className="destination-section" id="destinations"><div className="destination-heading"><p>{tr('目的地索引', 'DESTINATION INDEX')}</p><h2>{tr('七个重点目的地，\n其他国家按个案扩展。', 'Seven priority destinations,\nwith case-by-case expansion elsewhere.')}</h2><span>{tr('以下仅列示常见路径方向，不构成资格判断或法律意见。欧洲及其他国家作为开放扩展入口；所有外部链接指向政府或主管机关。', 'These are common route directions, not an eligibility finding or legal opinion. Europe and other jurisdictions remain an open expansion entry; external links point to government or official authorities.')}</span></div><div className="destination-grid">{destinations.map((item) => <article key={item.code}><div><b>{item.code}</b><h3>{lang === 'zh' ? item.zh : item.en}</h3></div><strong>{lang === 'zh' ? item.routesZh : item.routesEn}</strong><p>{lang === 'zh' ? item.noteZh : item.noteEn}</p><div>{item.links.map(([href, label]) => <a key={href} href={href} target="_blank" rel="noreferrer">{label} ↗</a>)}</div></article>)}</div></section>
+    <section className="destination-section" id="destinations"><div className="destination-heading"><p>{tr('目的地索引', 'DESTINATION INDEX')}</p><h2>{tr('八个重点目的地，\n其他国家按个案扩展。', 'Eight priority destinations,\nwith case-by-case expansion elsewhere.')}</h2><span>{tr('以下仅列示常见路径方向，不构成资格判断或法律意见。中国大陆可评估国内人才项目、回国发展及外国人来华路径；欧洲及其他国家作为开放扩展入口。所有外部链接指向政府或主管机关。', 'These are common route directions, not an eligibility finding or legal opinion. Mainland China assessments cover domestic talent programmes, returnee development and foreign-national routes; Europe and other jurisdictions remain an open expansion entry. External links point to government or official authorities.')}</span></div><div className="destination-grid">{destinations.map((item) => <article key={item.code}><div><b>{item.code}</b><h3>{lang === 'zh' ? item.zh : item.en}</h3></div><strong>{lang === 'zh' ? item.routesZh : item.routesEn}</strong><p>{lang === 'zh' ? item.noteZh : item.noteEn}</p><div>{item.links.map(([href, labelZh, labelEn]) => <a key={href} href={href} target="_blank" rel="noreferrer">{lang === 'en' && labelEn ? labelEn : labelZh} ↗</a>)}</div></article>)}</div></section>
 
     <section className="talent-evidence" id="talent"><div><p>{tr('人才项目证据', 'TALENT-PROGRAMME EVIDENCE')}</p><h2>{tr('人才项目不是一份简历，\n而是一条可核验的影响力证据链。', 'A talent application is not a CV.\nIt is a verifiable impact case.')}</h2></div><ol>{[
       [tr('资格门槛', 'Route threshold'), tr('先核对身份、收入、学历、职业、成就、邀请或担保要求。', 'Check status, income, education, profession, achievement, invitation and sponsorship requirements.')],

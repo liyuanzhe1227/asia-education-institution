@@ -10,7 +10,7 @@ export function SiteFooter() {
   return (
     <footer className="lux-footer">
       <div className="footer-lead">
-        <div className="footer-logo"><img src={assetPath('aei-mark.jpg')} alt="" /><strong>AEI</strong></div>
+        <div className="footer-logo"><img src={assetPath('aei-mark.jpg')} alt={lang === 'zh' ? '亚瑟（新加坡）教育学院' : 'Asia Education Institution'} /></div>
         <h2>{lang === 'zh' ? '把下一步，变成一条清晰的路径。' : 'Turn the next step into a clear pathway.'}</h2>
         <a href="tel:+6586267896">+65 8626 7896 <span>↗</span></a>
       </div>
