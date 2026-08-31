@@ -17,7 +17,7 @@ const menus = [
   {
     href: '/cases/', zh: '案例中心', en: 'Case Library',
     children: [
-      ['/cases/#overview', '申请数量', 'Application Data'],
+      ['/cases/#overview', '项目量级', 'Project Volume'],
       ['/cases/#year-analysis', '年度项目分析', 'Annual Analysis'],
       ['/cases/#analysis', '匿名案例分析', 'Case Analysis'],
       ['/evidence/', '证据与透明度', 'Evidence & Transparency'],

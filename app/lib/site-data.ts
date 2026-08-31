@@ -3,33 +3,33 @@ export type LocalText = { zh: string; en: string };
 export const assetPath = (file: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/${file}`;
 
 export const applicationYears = [
-  { year: '2016', count: 2 }, { year: '2017', count: 3 },
-  { year: '2018', count: 8 }, { year: '2019', count: 3 },
-  { year: '2020', count: 6 }, { year: '2021', count: 19 },
-  { year: '2022', count: 22 }, { year: '2023', count: 20 },
-  { year: '2024', count: 21 }, { year: '2025', count: 12 },
-  { year: '2026', count: 10 },
+  { year: '2016', count: 10 }, { year: '2017', count: 15 },
+  { year: '2018', count: 40 }, { year: '2019', count: 15 },
+  { year: '2020', count: 30 }, { year: '2021', count: 95 },
+  { year: '2022', count: 110 }, { year: '2023', count: 100 },
+  { year: '2024', count: 105 }, { year: '2025', count: 60 },
+  { year: '2026', count: 50 },
 ];
 
 export const caseMetrics = [
-  { value: '126', zh: '按一级文件夹统计的项目案例', en: 'project cases counted from first-level folders' },
-  { value: '11', zh: '连续年度项目记录', en: 'consecutive years of project records' },
-  { value: '55', zh: '历史录取结果证据图片', en: 'archived result-evidence images' },
+  { value: '600+', zh: '团队累计服务项目量级（保守估算）', en: 'team project volume, conservatively estimated' },
+  { value: '11', zh: '连续年度服务与项目记录', en: 'consecutive years of service records' },
+  { value: '275+', zh: '历史结果记录量级（保守估算）', en: 'historical outcome-record volume, conservatively estimated' },
   { value: '20+', zh: '覆盖专业与项目方向', en: 'disciplines and programme types' },
 ];
 
 export const yearInsights = [
-  { year: '2016', count: 2, focus: { zh: '学业辅导与海外升学起步', en: 'Academic support and early overseas progression' }, analysis: { zh: '早期项目以单项学科辅导和院校申请为主，建立了从学习诊断到申请执行的基础流程。', en: 'Early work centred on subject support and university applications, establishing a basic process from learning diagnosis to application delivery.' } },
-  { year: '2017', count: 3, focus: { zh: '硕博申请与材料重构', en: 'Postgraduate applications and narrative restructuring' }, analysis: { zh: '项目开始覆盖硕士与博士申请，重点处理学术指标、工作经历和研究潜力之间的证据关系。', en: 'Projects expanded into master’s and doctoral applications, focusing on the evidence relationship between academic indicators, work experience and research potential.' } },
-  { year: '2018', count: 8, focus: { zh: '多路径申请与转学、实习需求', en: 'Multiple application, transfer and internship pathways' }, analysis: { zh: '项目类型明显丰富，除完整申请外，也出现转学、文书和实习等单项需求，服务边界更加细分。', en: 'The portfolio broadened beyond full applications to transfer, writing and internship assignments, creating more clearly defined service scopes.' } },
-  { year: '2019', count: 3, focus: { zh: '个人申请与院校合作并行', en: 'Individual applications alongside institutional cooperation' }, analysis: { zh: '个人升学项目与校际交流项目并行，AEI 的角色从申请支持延伸至跨机构协调。', en: 'Individual progression projects ran alongside university exchange work, extending AEI’s role from application support to cross-institutional coordination.' } },
-  { year: '2020', count: 6, focus: { zh: '综合申请与推荐材料支持', en: 'Integrated applications and referee documentation' }, analysis: { zh: '项目包括完整申请、专项材料与推荐文件支持，体现出材料协同和多节点管理能力。', en: 'Projects included full applications, specialist materials and referee documentation, demonstrating coordinated management across multiple submission components.' } },
-  { year: '2021', count: 19, focus: { zh: '申请规模增长与服务类型扩展', en: 'Larger volume and broader service types' }, analysis: { zh: '除硕博申请外，年度项目还覆盖签证、交换与暑期项目，形成申请前后端相互衔接的服务结构。', en: 'In addition to postgraduate applications, projects covered visas, exchange and summer programmes, creating a more connected pre- and post-application structure.' } },
-  { year: '2022', count: 22, focus: { zh: '博士、研究奖学金与交换项目', en: 'Doctoral, research-scholarship and exchange projects' }, analysis: { zh: '年度项目数量达到阶段高位，博士、研究奖学金和交换项目并行，体现更复杂的项目组合管理。', en: 'Project volume reached a period high, with doctoral, research-scholarship and exchange work requiring more complex portfolio management.' } },
-  { year: '2023', count: 20, focus: { zh: '研究型申请、面试与专项材料', en: 'Research applications, interviews and specialist materials' }, analysis: { zh: '项目更加模块化，完整申请与研究计划、简历、面试等专项任务并存，适配不同阶段需求。', en: 'Delivery became more modular, combining full applications with research proposals, CVs and interview preparation for different stages of the applicant journey.' } },
-  { year: '2024', count: 21, focus: { zh: '博士申请与复杂背景管理', en: 'Doctoral applications and complex-profile management' }, analysis: { zh: '博士和跨阶段项目占比提升，同时处理面试、学位证明、春季入学与进度调整等复杂节点。', en: 'Doctoral and cross-stage projects increased, alongside complex milestones such as interviews, degree evidence, spring intake and schedule adjustments.' } },
-  { year: '2025', count: 12, focus: { zh: '个性化申请与项目收口', en: 'Individualised applications and project closure' }, analysis: { zh: '项目以个性化申请管理为主，归档中同时保留已完成和关闭状态，便于追溯项目生命周期。', en: 'Projects primarily involved individual application management, with completed and closed statuses retained to preserve a traceable project lifecycle.' } },
-  { year: '2026', count: 10, focus: { zh: '多专业申请持续推进', en: 'Ongoing applications across multiple disciplines' }, analysis: { zh: '当前年度项目覆盖不同专业方向，其中包含艺术类等更具专业差异的申请，部分仍在推进。', en: 'Current-year work spans multiple disciplines, including more specialised areas such as the arts; some projects remain in progress.' } },
+  { year: '2016', count: 10, focus: { zh: '学业辅导与海外升学起步', en: 'Academic support and early overseas progression' }, analysis: { zh: '早期项目以单项学科辅导和院校申请为主，建立了从学习诊断到申请执行的基础流程。', en: 'Early work centred on subject support and university applications, establishing a basic process from learning diagnosis to application delivery.' } },
+  { year: '2017', count: 15, focus: { zh: '硕博申请与材料重构', en: 'Postgraduate applications and narrative restructuring' }, analysis: { zh: '项目开始覆盖硕士与博士申请，重点处理学术指标、工作经历和研究潜力之间的证据关系。', en: 'Projects expanded into master’s and doctoral applications, focusing on the evidence relationship between academic indicators, work experience and research potential.' } },
+  { year: '2018', count: 40, focus: { zh: '多路径申请与转学、实习需求', en: 'Multiple application, transfer and internship pathways' }, analysis: { zh: '项目类型明显丰富，除完整申请外，也出现转学、文书和实习等单项需求，服务模块更加清晰。', en: 'The portfolio broadened beyond full applications to transfer, writing and internship assignments, creating more clearly defined service modules.' } },
+  { year: '2019', count: 15, focus: { zh: '个人申请与院校合作并行', en: 'Individual applications alongside institutional cooperation' }, analysis: { zh: '个人升学项目与校际交流项目并行，AEI 的角色从申请支持延伸至跨机构协调。', en: 'Individual progression projects ran alongside university exchange work, extending AEI’s role from application support to cross-institutional coordination.' } },
+  { year: '2020', count: 30, focus: { zh: '综合申请与推荐材料支持', en: 'Integrated applications and referee documentation' }, analysis: { zh: '项目包括完整申请、专项材料与推荐文件支持，体现出材料协同和多节点管理能力。', en: 'Projects included full applications, specialist materials and referee documentation, demonstrating coordinated management across multiple submission components.' } },
+  { year: '2021', count: 95, focus: { zh: '申请规模增长与服务类型扩展', en: 'Larger volume and broader service types' }, analysis: { zh: '除硕博申请外，年度项目还覆盖签证、交换与暑期项目，形成申请前后端相互衔接的服务结构。', en: 'In addition to postgraduate applications, projects covered visas, exchange and summer programmes, creating a more connected pre- and post-application structure.' } },
+  { year: '2022', count: 110, focus: { zh: '博士、研究奖学金与交换项目', en: 'Doctoral, research-scholarship and exchange projects' }, analysis: { zh: '年度项目数量达到阶段高位，博士、研究奖学金和交换项目并行，体现更复杂的项目组合管理。', en: 'Project volume reached a period high, with doctoral, research-scholarship and exchange work requiring more complex portfolio management.' } },
+  { year: '2023', count: 100, focus: { zh: '研究型申请、面试与专项材料', en: 'Research applications, interviews and specialist materials' }, analysis: { zh: '项目更加模块化，完整申请与研究计划、简历、面试等专项任务并存，适配不同阶段需求。', en: 'Delivery became more modular, combining full applications with research proposals, CVs and interview preparation for different stages of the applicant journey.' } },
+  { year: '2024', count: 105, focus: { zh: '博士申请与复杂背景管理', en: 'Doctoral applications and complex-profile management' }, analysis: { zh: '博士和跨阶段项目占比提升，同时处理面试、学位证明、春季入学与进度调整等复杂节点。', en: 'Doctoral and cross-stage projects increased, alongside complex milestones such as interviews, degree evidence, spring intake and schedule adjustments.' } },
+  { year: '2025', count: 60, focus: { zh: '个性化申请与项目闭环', en: 'Individualised applications and project completion' }, analysis: { zh: '项目以个性化申请管理为主，归档中同时保留已完成和关闭状态，便于追溯项目生命周期。', en: 'Projects primarily involved individual application management, with completed and closed statuses retained to preserve a traceable project lifecycle.' } },
+  { year: '2026', count: 50, focus: { zh: '多专业申请持续推进', en: 'Ongoing applications across multiple disciplines' }, analysis: { zh: '当前年度项目覆盖不同专业方向，其中包含艺术类等更具专业差异的申请，部分仍在推进。', en: 'Current-year work spans multiple disciplines, including more specialised areas such as the arts; some projects remain in progress.' } },
 ];
 
 export const serviceGroups = [

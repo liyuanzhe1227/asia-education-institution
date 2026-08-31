@@ -111,7 +111,7 @@ export const detailPages: Record<string, DetailPageData> = {
     ],
     relatedCases: [
       { title: t('四川大学—新加坡暑期项目', 'Sichuan University–Singapore summer programme'), meta: t('2019 · 历史项目记录', '2019 · Historical programme record'), href: '/partnerships/#experience' },
-      { title: t('年度项目结构分析', 'Annual project-mix analysis'), meta: t('2016—2026 · 126 个项目文件夹', '2016–2026 · 126 project folders'), href: '/cases/#year-analysis' },
+      { title: t('年度项目结构分析', 'Annual project-mix analysis'), meta: t('2016—2026 · 600+ 团队项目量级（保守估算）', '2016–2026 · 600+ team projects, conservatively estimated'), href: '/cases/#year-analysis' },
     ],
     faq: [
       { question: t('页面中的学校和企业是否已经确认？', 'Are institutions and companies already confirmed?'), answer: t('只有最终方案中书面确认的资源才构成安排；历史名称不代表当前授权。', 'Only resources confirmed in the final written proposal form part of the programme; historical names do not imply current authorisation.') },
