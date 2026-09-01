@@ -9,6 +9,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "export": "next build",
+    "export:cloudflare": "CLOUDFLARE_PAGES=true next build",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
