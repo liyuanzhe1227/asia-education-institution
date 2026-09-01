@@ -50,6 +50,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       evidence: { zh: '证据与透明度｜AEI', en: 'Evidence & Transparency | AEI' },
       privacy: { zh: '隐私与网站说明｜AEI', en: 'Privacy & Website Notice | AEI' },
       mobility: { zh: '签证、永居与身份规划｜AEI', en: 'Visa, Residence & Citizenship | AEI' },
+      china: { zh: '中国家庭与全龄教育服务｜AEI', en: 'China Family & All-stage Education | AEI' },
     };
     document.title = titles[page]?.[lang] ?? titles.home[lang];
   }, [lang]);

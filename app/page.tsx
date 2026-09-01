@@ -15,12 +15,12 @@ export default function Home() {
   return (
     <main>
       <section className="lux-hero">
-        <div className="hero-index">{tr('亚瑟教育 / 2015—2026', 'AEI / 2015—2026')}</div>
+        <div className="hero-index">{tr('新加坡注册 · 中国家庭服务 · 全球资源协作', 'SINGAPORE-REGISTERED · CHINA FAMILY SERVICES · GLOBAL DELIVERY')}</div>
         <div className="lux-hero-copy">
           <p className="lux-kicker">{tr('新加坡 · 教育与国际合作', 'SINGAPORE · EDUCATION & GLOBAL CONNECTION')}</p>
           <h1>{tr('让每一种成长，\n都有清晰路径。', 'A clearer pathway\nfor every ambition.')}</h1>
-          <p>{tr('从升学申请、学术研究到国际项目与院校合作，AEI 将复杂选择整理为可执行、可复盘的长期路径。', 'From admissions and research to global programmes and institutional partnerships, AEI turns complex choices into structured, reviewable pathways.')}</p>
-          <div className="lux-hero-actions"><a className="solid-cta" href="/services/">{tr('进入服务中心', 'Explore services')}<span>↗</span></a><a className="line-cta" href="/cases/">{tr('查看匿名案例', 'View anonymised cases')}<span>→</span></a></div>
+          <p>{tr('面向中国家庭、学生、研究者、院校与机构，从幼儿园、小学、初高中到大学、硕博、科研、竞赛与全球发展，AEI 将跨国教育资源整理成清晰、可执行的长期路径。', 'For China-based families, students, researchers and institutions, AEI connects early years, school, university, postgraduate study, research, competitions and global development through clear, executable pathways.')}</p>
+          <div className="lux-hero-actions"><a className="solid-cta" href="/china/">{tr('中国家庭服务', 'China family services')}<span>↗</span></a><a className="line-cta" href="/services/">{tr('查看全部服务', 'Explore all services')}<span>→</span></a></div>
         </div>
         <div className="lux-hero-art" aria-hidden="true">
           <div className="art-disc"><span>AEI</span><small>{tr('新加坡', 'SINGAPORE')}</small></div>
@@ -35,8 +35,13 @@ export default function Home() {
         {caseMetrics.slice(0, 3).map((metric) => <div key={metric.value + metric.zh}><strong>{metric.value}</strong><span>{lang === 'zh' ? metric.zh : metric.en}</span></div>)}
       </section>
 
+      <section className="china-home-entry">
+        <div><p>00 / {tr('中国家庭与全龄教育', 'CHINA FAMILY & ALL-STAGE EDUCATION')}</p><h2>{tr('从幼儿园到硕博，\n从兴趣项目到全球发展。', 'From early years to postgraduate study,\nfrom interests to global development.')}</h2></div>
+        <div><p>{tr('家长需要的不是一堆国家、学校和奖项名称，而是一张能执行的家庭路径图。AEI 以中国时区中文沟通为入口，由新加坡注册主体管理跨国项目，并按需要协调学校、导师、机构和持牌专业人士。', 'Families need an executable pathway map, not a list of countries, schools and awards. AEI provides Chinese-language communication in the China time zone, with cross-border delivery governed by its Singapore-registered entity and coordinated with schools, mentors, institutions and licensed professionals as needed.')}</p><div><a href="/china/#stages">{tr('查看全龄教育路径', 'Explore all-stage pathways')} ↗</a><a href="/cases/#illustrative">{tr('查看低龄与项目示例', 'View school-age and project scenarios')} →</a></div></div>
+      </section>
+
       <section className="editorial-section home-services">
-        <div className="editorial-heading"><p>01 / {tr('业务体系', 'PATHWAYS')}</p><h2>{tr('七条业务线，\n一个完整成长系统', 'Seven pathways.\nOne connected system.')}</h2><a href="/services/">{tr('查看服务架构', 'Explore the service architecture')} →</a></div>
+        <div className="editorial-heading"><p>01 / {tr('业务体系', 'PATHWAYS')}</p><h2>{tr('七条业务线，\n覆盖全龄成长与跨国发展', 'Seven pathways.\nAll-stage growth and global development.')}</h2><a href="/services/">{tr('查看服务架构', 'Explore the service architecture')} →</a></div>
         <div className="service-mosaic">
           {serviceGroups.map((service) => <a id={service.slug} key={service.number} href={serviceHref[service.slug]}><span>{service.number}</span><small>{tr(`第 ${service.number} 条业务线`, `PATHWAY ${service.number}`)}</small><h3>{lang === 'zh' ? service.title.zh : service.title.en}</h3><p>{lang === 'zh' ? service.summary.zh : service.summary.en}</p><b>↗</b></a>)}
         </div>
@@ -44,7 +49,7 @@ export default function Home() {
 
       <section className="case-feature-home">
         <div className="case-feature-image"><img src={assetPath('learning-room.jpg')} alt={tr('AEI 学习项目', 'AEI learning programme')} /><span>{tr('案例中心 / 01', 'CASE LIBRARY / 01')}</span></div>
-        <div className="case-feature-copy"><p>02 / {tr('案例中心', 'CASE LIBRARY')}</p><h2>{tr('不只展示结果，\n更解释路径。', 'Beyond outcomes:\nwe explain the pathway.')}</h2><p>{tr('案例以匿名方式呈现背景、难点、策略与结果。服务项目量级、结果记录与个案证据分别说明，让经验可理解、口径可核验。', 'Cases present profile, challenge, strategy and outcome in anonymised form. Project volume, outcome records and case evidence are reported separately, keeping both the experience and its basis clear.')}</p><div className="case-mini-list">{detailedCases.slice(0, 3).map((item) => <div key={item.id}><span>{item.year}</span><strong>{lang === 'zh' ? item.title.zh : item.title.en}</strong><small>{lang === 'zh' ? item.categoryLabel.zh : item.categoryLabel.en}</small></div>)}</div><a className="solid-cta orange" href="/cases/">{tr('进入案例数据库', 'Enter the case library')} <span>↗</span></a></div>
+        <div className="case-feature-copy"><p>02 / {tr('案例中心', 'CASE LIBRARY')}</p><h2>{tr('不只展示结果，\n更解释路径。', 'Beyond outcomes:\nwe explain the pathway.')}</h2><p>{tr('历史档案以匿名方式说明背景、难点、策略与结果；综合示例则清楚标注为非真实客户情境，用来解释幼儿园至硕博、竞赛、科研与出版项目可以如何设计。', 'Historical archives explain profile, challenge, strategy and outcome anonymously. Clearly labelled composite scenarios show how early-years, school, postgraduate, competition, research and publishing projects may be designed without representing real clients.')}</p><div className="case-mini-list">{detailedCases.slice(0, 3).map((item) => <div key={item.id}><span>{item.year}</span><strong>{lang === 'zh' ? item.title.zh : item.title.en}</strong><small>{lang === 'zh' ? item.categoryLabel.zh : item.categoryLabel.en}</small></div>)}</div><a className="solid-cta orange" href="/cases/">{tr('进入案例与情境库', 'Enter the case and scenario library')} <span>↗</span></a></div>
       </section>
 
       <section className="editorial-section data-section">

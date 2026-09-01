@@ -15,6 +15,15 @@ const menus = [
     ],
   },
   {
+    href: '/china/', zh: '中国家庭服务', en: 'China Family Services',
+    children: [
+      ['/china/#stages', '全龄升学路径', 'All-stage Pathways'],
+      ['/china/#competitions', '竞赛与创新项目', 'Competitions & Innovation'],
+      ['/china/#cross-border', '跨国服务机制', 'Cross-border Model'],
+      ['/cases/#illustrative', '典型情境与综合示例', 'Illustrative Scenarios'],
+    ],
+  },
+  {
     href: '/cases/', zh: '案例中心', en: 'Case Library',
     children: [
       ['/cases/#overview', '项目量级', 'Project Volume'],
@@ -54,6 +63,7 @@ const menus = [
       ['/about/#profile', '机构简介', 'Profile'],
       ['/about/#registry', '注册信息', 'Registration'],
       ['/about/#team', '责任团队', 'Accountability'],
+      ['/about/#network', '协作网络', 'Collaboration Network'],
       ['/about/#principles', '服务原则', 'Principles'],
       ['/about/#consultation', '预约咨询', 'Consultation'],
     ],
@@ -79,7 +89,7 @@ export function SiteHeader() {
   return (
     <>
       <div className="utility-bar">
-        <span>{lang === 'zh' ? '新加坡教育与国际合作平台' : 'Singapore education and global partnership platform'}</span>
+        <span>{lang === 'zh' ? '新加坡注册 · 中国家庭与全球教育服务' : 'Singapore-registered · China family and global education services'}</span>
         <div><a href="mailto:eric2015aei@gmail.com">eric2015aei@gmail.com</a><a href="tel:+6586267896">+65 8626 7896</a></div>
       </div>
       <header className="lux-header">

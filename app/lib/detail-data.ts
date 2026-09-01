@@ -19,9 +19,9 @@ export const detailPages: Record<string, DetailPageData> = {
   admissions: {
     section: t('个人成长服务 / 01', 'PERSONAL SERVICES / 01'),
     title: t('升学与申请', 'Admissions & Pathways'),
-    proposition: t('把背景、目标与时间，整理成一套可执行的申请组合。', 'Turn profile, goals and timing into an executable application portfolio.'),
-    intro: t('适用于硕士、博士、跨专业、延毕、低分或申请启动较晚等情形。服务范围在开始前书面确认，可选择完整申请或单项支持。', 'For master’s, doctoral, cross-disciplinary, delayed-graduation, lower-score or late-cycle applications. Scope is agreed in writing before work begins, as a full application or defined module.'),
-    audience: [t('需要硕士或博士项目定位的申请者', 'Applicants seeking master’s or doctoral positioning'), t('存在跨专业、成绩或时间线解释需求的申请者', 'Applicants who need to explain a discipline change, grades or timeline'), t('需要材料、面试与递交节点协同的家庭', 'Families needing coordinated materials, interviews and submissions')],
+    proposition: t('从幼儿园到硕博，把家庭目标、学生能力与时间整理成可执行路径。', 'From early years to postgraduate study, turn family goals, student capability and timing into an executable pathway.'),
+    intro: t('适用于幼儿园、小学、初高中、本科、硕士、博士、转轨、跨专业及特殊背景等情形。低龄阶段强调家庭决策、课程与学校匹配；大学及以上阶段进一步覆盖材料、面试与递交管理。服务范围在开始前书面确认。', 'For kindergarten, primary, secondary, undergraduate, master’s, doctoral, school-transition, cross-disciplinary and complex-profile needs. Early-years work centres on family decisions, curriculum and school fit; university and postgraduate work adds materials, interviews and submission management. Scope is agreed in writing before work begins.'),
+    audience: [t('正在比较幼儿园、小学、初高中或国际课程的家庭', 'Families comparing early-years, primary, secondary or international-curriculum options'), t('准备本科、转学、硕士或博士申请的学生', 'Students preparing undergraduate, transfer, master’s or doctoral applications'), t('需要家庭沟通、材料、面试与多节点协同的申请者', 'Applicants needing family alignment, materials, interviews and multi-stage coordination')],
     process: [
       { title: t('背景诊断', 'Profile diagnosis'), body: t('核对成绩、语言、研究、工作经历、时间与限制条件。', 'Review academics, language, research, work, timing and constraints.') },
       { title: t('分层定位', 'Tiered positioning'), body: t('按匹配度、风险与截止日期形成院校和专业组合。', 'Build a programme portfolio by fit, risk and deadline.') },
@@ -34,8 +34,8 @@ export const detailPages: Record<string, DetailPageData> = {
       { title: t('项目化管理', 'Project discipline'), body: t('明确任务、责任人、截止日期与版本，降低漏项风险。', 'Tasks, owners, deadlines and versions are made explicit.') },
     ],
     relatedCases: [
+      { title: t('中国家庭全龄教育典型情境', 'Illustrative all-stage scenarios for China-based families'), meta: t('幼儿园 · 小学 · 初高中 · 大学', 'Early years · Primary · Secondary · University'), href: '/cases/#illustrative' },
       { title: t('工作经历如何成为申请主线', 'Work experience as the application spine'), meta: t('工程与项目管理 · 授课型硕士', 'Engineering & project management · Taught master’s'), href: '/cases/#analysis' },
-      { title: t('延毕与晚申请窗口的风险重排', 'Late-cycle risk after delayed graduation'), meta: t('电子工程 · 授课型硕士', 'Electronics · Taught master’s'), href: '/cases/#analysis' },
     ],
     faq: [
       { question: t('是否承诺录取？', 'Do you guarantee admission?'), answer: t('不承诺。AEI 对服务范围、过程和交付负责；录取决定由院校作出。', 'No. AEI is accountable for agreed scope, process and delivery; institutions make admission decisions.') },

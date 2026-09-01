@@ -36,11 +36,11 @@ export const serviceGroups = [
   {
     number: '01', slug: 'admissions',
     title: { zh: '升学与申请', en: 'Admissions & Pathways' },
-    summary: { zh: '硕士、博士、跨专业与特殊背景申请，从定位到递交形成完整证据链。', en: 'Master’s, doctoral, cross-disciplinary and complex-profile applications, structured from positioning to submission.' },
+    summary: { zh: '从幼儿园、小学、初高中到大学与硕博，按年龄、课程体系与家庭目标设计升学路径。', en: 'Education pathways from kindergarten and school years to university and postgraduate study, aligned with age, curriculum and family goals.' },
     items: [
-      { zh: '目标与背景诊断', en: 'Goal and profile diagnosis' },
-      { zh: '分层选校与专业组合', en: 'Tiered university and programme portfolio' },
-      { zh: '材料逻辑、面试与递交管理', en: 'Narrative, interview and submission management' },
+      { zh: '低龄入学、转轨与国际课程规划', en: 'Early-years entry, school transition and international curricula' },
+      { zh: '本科、硕士与博士分层申请', en: 'Tiered undergraduate, master’s and doctoral applications' },
+      { zh: '家庭沟通、材料、面试与递交管理', en: 'Family alignment, materials, interviews and submission management' },
     ],
   },
   {
@@ -178,6 +178,100 @@ export const detailedCases: DetailedCase[] = [
     strategy: { zh: '优先处理时间线与事实说明，再以工程课程基础和目标专业匹配支撑申请，采用并行材料管理。', en: 'Prioritised the timeline explanation, then supported fit through engineering coursework and parallel material management.' },
     result: { zh: '在申请季后段获得南洋理工大学电子相关硕士项目录取。', en: 'Received an offer for an electronics-related master’s programme at NTU late in the cycle.' },
     evidenceBasis: { zh: '来源：历史公司介绍中的匿名案例摘要；不公开个人身份和申请文件。', en: 'Basis: anonymised case summary in the archived company profile; identity and application files are not published.' },
+  },
+];
+
+export type IllustrativeCase = {
+  id: string;
+  stage: LocalText;
+  title: LocalText;
+  profile: LocalText;
+  goal: LocalText;
+  plan: LocalText;
+  target: LocalText;
+  boundary: LocalText;
+};
+
+export const illustrativeCases: IllustrativeCase[] = [
+  {
+    id: 'kindergarten-transition',
+    stage: { zh: '幼儿园 / 学前', en: 'Kindergarten / Early Years' },
+    title: { zh: '中国家庭转入新加坡双语学前环境', en: 'A China-based family preparing for a Singapore bilingual early-years setting' },
+    profile: { zh: '4—5 岁儿童，家庭计划在 12—18 个月内迁居或长期往返，希望兼顾中文基础、英语适应与情绪稳定。', en: 'A child aged four to five whose family expects to relocate or travel regularly within 12–18 months, while preserving Chinese foundations and supporting English and emotional adjustment.' },
+    goal: { zh: '先确定课程与照护需求，再比较学校类型、入学时间、通勤与家庭安排。', en: 'Define curriculum and care needs before comparing school types, entry timing, commute and family arrangements.' },
+    plan: { zh: '完成家庭访谈、语言与生活习惯观察、学校清单、开放日问题表和入学材料时间线。', en: 'Family interview, language and routine observation, school shortlist, open-day question set and admissions timeline.' },
+    target: { zh: '形成 2—3 条可执行入学路径，并为入学前 12 周安排语言、作息与家校沟通准备。', en: 'Produce two to three viable entry pathways and a 12-week preparation plan for language, routines and parent–school communication.' },
+    boundary: { zh: '综合示例，不对应真实学生；学校名额、录取与签证由学校及主管机关决定。', en: 'Composite scenario, not a real student record; places, admission and visas are decided by schools and authorities.' },
+  },
+  {
+    id: 'primary-robotics',
+    stage: { zh: '小学', en: 'Primary School' },
+    title: { zh: '把机器人兴趣发展为持续的工程学习项目', en: 'Turning a robotics interest into a sustained engineering-learning project' },
+    profile: { zh: '小学高年级学生，动手能力较强，但项目记录零散，家长希望兼顾数学、编程、表达与竞赛体验。', en: 'An upper-primary student with strong practical interest but fragmented project records; the family wants balanced progress in mathematics, coding, communication and competition exposure.' },
+    goal: { zh: '不以“拿奖”为单一目标，建立可以连续迭代的设计、测试与展示能力。', en: 'Build iterative design, testing and presentation capability rather than treating an award as the sole objective.' },
+    plan: { zh: '以传感器小车为主项目，分解机械结构、基础编程、测试日志、英文展示和合适赛事筛选。', en: 'Use a sensor-based vehicle as the anchor project, covering mechanics, basic coding, test logs, English presentation and suitable event selection.' },
+    target: { zh: '完成可运行原型、项目日志与 3 分钟双语展示，并具备参加适龄赛事或校内展示的材料。', en: 'Complete a working prototype, project log and three-minute bilingual presentation suitable for an age-appropriate event or school showcase.' },
+    boundary: { zh: '综合示例，不对应真实获奖案例；报名资格、赛制与奖项由主办方决定。', en: 'Composite scenario, not a real award case; eligibility, rules and awards are controlled by organisers.' },
+  },
+  {
+    id: 'middle-school-math-pathway',
+    stage: { zh: '初中', en: 'Lower Secondary' },
+    title: { zh: '奥林匹克数学训练与国际课程转轨并行', en: 'Olympiad mathematics preparation alongside an international-curriculum transition' },
+    profile: { zh: '初二学生，校内数学基础较好，计划转入 IGCSE 或同类国际课程，但竞赛训练缺少层级和节奏。', en: 'A Year 8 student with strong school mathematics who plans to move into IGCSE or a comparable curriculum but lacks a structured competition pathway.' },
+    goal: { zh: '区分校内课程、竞赛能力与国际课程语言要求，避免用刷题替代系统学习。', en: 'Separate school curriculum, competition capability and language demands, avoiding unstructured problem drilling.' },
+    plan: { zh: '通过诊断卷建立代数、几何、数论与组合模块图，安排 16 周训练、英文数学表达和阶段测评。', en: 'Map algebra, geometry, number theory and combinatorics through diagnostics, followed by a 16-week plan, mathematical English and staged assessment.' },
+    target: { zh: '形成清晰的能力基线、训练记录和下一阶段赛事选择依据，同时完成国际课程衔接清单。', en: 'Create a documented baseline, training record and evidence for selecting the next event, alongside an international-curriculum transition checklist.' },
+    boundary: { zh: '综合示例；不承诺竞赛名次、分数提升幅度或学校录取。', en: 'Composite scenario; no competition rank, score increase or school admission is guaranteed.' },
+  },
+  {
+    id: 'high-school-multi-system',
+    stage: { zh: '高中', en: 'Upper Secondary' },
+    title: { zh: '在 A-Level、IB 与 AP 之间做家庭决策', en: 'A family decision across A-Level, IB and AP pathways' },
+    profile: { zh: '高一阶段，学术表现均衡，目标国家尚未确定，家庭对课程难度、活动投入与申请节奏存在不同判断。', en: 'A Year 10 student with balanced performance and no fixed destination; family members differ on curriculum difficulty, activity load and application timing.' },
+    goal: { zh: '从学生能力、学校资源、目标地区和家庭承受度出发，而不是只比较课程名气。', en: 'Decide from student capability, school resources, destination options and family capacity rather than curriculum reputation alone.' },
+    plan: { zh: '比较三套课程的科目结构、评估方式、语言要求、活动空间与大学申请影响，形成两条主路径和一条备选路径。', en: 'Compare subject structures, assessment, language demands, activity capacity and university implications, producing two main routes and one contingency.' },
+    target: { zh: '完成家庭共识文件、未来 24 个月学术与活动日历，以及专业探索和选校研究任务。', en: 'Complete a family decision record, a 24-month academic and activity calendar, and structured subject and university exploration.' },
+    boundary: { zh: '综合示例；课程选择须结合具体学校规定与学生实际表现持续调整。', en: 'Composite scenario; curriculum decisions must be reviewed against school rules and the student’s actual progress.' },
+  },
+  {
+    id: 'robotics-competition-team',
+    stage: { zh: '机器人比赛', en: 'Robotics Competition' },
+    title: { zh: '从组队到答辩的机器人竞赛项目管理', en: 'Managing a robotics competition from team formation to judging' },
+    profile: { zh: '3—5 人中学生团队，成员能力不一，有基础设备但缺少任务分工、测试标准和答辩材料。', en: 'A three-to-five-member secondary team with mixed capability, basic equipment but no clear task ownership, test standard or judging pack.' },
+    goal: { zh: '把作品、工程日志、团队协作与现场表达作为同一项目交付。', en: 'Treat the prototype, engineering log, teamwork and live presentation as one integrated delivery.' },
+    plan: { zh: '建立规则核对表、责任矩阵、每周冲刺、故障清单、版本记录、海报和问答演练。', en: 'Build a rules checklist, responsibility matrix, weekly sprints, failure log, version record, poster and judging rehearsal.' },
+    target: { zh: '在报名截止前完成合规原型、工程记录和答辩包，并能够解释设计选择与测试结果。', en: 'Complete a compliant prototype, engineering record and judging pack before registration closes, with clear explanation of design choices and test results.' },
+    boundary: { zh: '综合示例；AEI 可提供项目协调与学习支持，不代替参赛学生完成作品，也不保证奖项。', en: 'Composite scenario; AEI may support learning and coordination but does not produce the entry for students or guarantee an award.' },
+  },
+  {
+    id: 'undergraduate-paper',
+    stage: { zh: '本科研究 / 论文', en: 'Undergraduate Research / Paper' },
+    title: { zh: '把课程项目发展为可投稿的研究稿件', en: 'Developing a course project into a submission-ready research manuscript' },
+    profile: { zh: '本科二至三年级学生，已有课程数据和初步结果，但研究问题、方法说明与文献关系不够完整。', en: 'A second- or third-year undergraduate with course-project data and preliminary findings but an incomplete research question, methods account and literature positioning.' },
+    goal: { zh: '先判断研究是否成立，再决定是否进入会议、期刊或校内成果路径。', en: 'First determine whether the study is viable, then select a conference, journal or internal-output pathway.' },
+    plan: { zh: '完成问题重述、文献地图、方法核查、数据与图表审阅、写作计划、作者责任和目标渠道筛选。', en: 'Refine the question, map literature, review methods, data and figures, set a writing plan, clarify authorship and shortlist suitable outlets.' },
+    target: { zh: '形成结构完整、证据一致、可进入导师或期刊预审的稿件包与回应清单。', en: 'Produce a coherent manuscript package and response checklist suitable for supervisor or editorial pre-review.' },
+    boundary: { zh: '综合示例；不代写、不伪造数据，发表与审稿决定由期刊、会议或出版社作出。', en: 'Composite scenario; no ghostwriting or fabricated data. Publication and review decisions rest with journals, conferences or publishers.' },
+  },
+  {
+    id: 'student-monograph',
+    stage: { zh: '专著 / 出版项目', en: 'Monograph / Publishing Project' },
+    title: { zh: '把长期专题积累整理为专著提案', en: 'Structuring long-term subject work into a monograph proposal' },
+    profile: { zh: '高中生、本科生或青年研究者持续积累某一主题的访谈、案例与阅读笔记，希望形成正式出版方向。', en: 'A senior-school student, undergraduate or early-career researcher with sustained interviews, cases and reading notes who wants to explore a formal publication route.' },
+    goal: { zh: '先确认原创性、读者与内容规模，避免把资料汇编误当作可出版专著。', en: 'Clarify originality, readership and scale before treating collected material as a publishable monograph.' },
+    plan: { zh: '完成主题边界、目录、样章、引文与图片权限清单、作者说明、出版方向和项目时间表。', en: 'Develop scope, contents, sample chapter, citation and image-rights checklist, author statement, publishing route and project timeline.' },
+    target: { zh: '形成可供导师、编辑或出版社评估的专著提案与样章，不提前宣称已出版。', en: 'Produce a monograph proposal and sample chapter for evaluation by a supervisor, editor or publisher, without claiming publication in advance.' },
+    boundary: { zh: '综合示例；书号、出版合同、出版时间与发行由合资格出版社及相关机构决定。', en: 'Composite scenario; ISBN, contract, schedule and distribution are determined by qualified publishers and relevant bodies.' },
+  },
+  {
+    id: 'family-cross-border-plan',
+    stage: { zh: '家庭跨国规划', en: 'Cross-border Family Planning' },
+    title: { zh: '教育路径、家属安排与长期身份同步规划', en: 'Aligning education, dependant arrangements and long-term status planning' },
+    profile: { zh: '家庭成员分别位于中国与新加坡，涉及子女入学、家长工作安排、短期签证与未来长期居留选择。', en: 'A family split between China and Singapore, balancing school entry, parental work, short-term visas and future residence options.' },
+    goal: { zh: '把教育决策与身份路径放到同一时间轴，但明确教育咨询与受监管法律意见的分工。', en: 'Place education decisions and status pathways on one timeline while separating education consulting from regulated legal advice.' },
+    plan: { zh: '整理家庭目标、时间节点、学校要求、材料依赖、风险清单，并在需要时协调持牌专业人士。', en: 'Map family goals, milestones, school requirements, document dependencies and risks, coordinating licensed professionals where needed.' },
+    target: { zh: '形成 12—24 个月跨国行动图，明确每项决定的负责人、前置条件和备选方案。', en: 'Produce a 12–24 month cross-border action map with owners, prerequisites and contingencies for each decision.' },
+    boundary: { zh: '综合示例；签证、永居和公民身份由主管机关决定，法律意见由相应法域持牌人士提供。', en: 'Composite scenario; visas, residence and citizenship are decided by authorities, with legal advice provided by licensed professionals.' },
   },
 ];
 

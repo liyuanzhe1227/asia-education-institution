@@ -766,4 +766,107 @@ html[data-lang="en"] h3 { letter-spacing: -.035em; }
   .footer-links { grid-template-columns: 1fr; }
 }
 
+/* China-family, all-stage education and transparent illustrative scenarios */
+.china-home-entry { display: grid; grid-template-columns: 1.08fr .92fr; gap: 8vw; align-items: end; padding: 105px clamp(24px, 7vw, 112px); background: var(--ivory); }
+.china-home-entry > div:first-child > p,
+.china-section-heading > p,
+.cross-border-model > div > p,
+.illustrative-case-heading > p,
+.team-network > div:first-child > p { color: var(--orange-deep); font: 700 10px Arial, sans-serif; letter-spacing: .055em; }
+.china-home-entry h2,
+.china-section-heading h2,
+.cross-border-model h2,
+.illustrative-case-heading h2,
+.team-network h2 { margin: 0; white-space: pre-line; font: 500 clamp(38px, 4.6vw, 66px)/1.07 Georgia, "Microsoft YaHei", serif; letter-spacing: -.04em; }
+.china-home-entry > div:last-child > p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.95; }
+.china-home-entry > div:last-child > div { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.china-home-entry a { min-height: 46px; display: inline-flex; align-items: center; padding: 12px 16px; border: 1px solid var(--line); font-size: 11px; font-weight: 700; }
+.china-home-entry a:first-child { background: var(--orange); border-color: var(--orange); }
+
+.china-hero { min-height: 690px; display: grid; grid-template-columns: 1.12fr .88fr; align-content: end; gap: 7vw; padding: 105px clamp(24px, 7vw, 112px) 90px; background: linear-gradient(128deg, #e39a70 0%, #df8659 48%, #edbb8d 100%); color: #261b17; }
+.china-hero > p { grid-column: 1 / -1; margin-bottom: -38px; font: 700 10px Arial, sans-serif; letter-spacing: .05em; }
+.china-hero h1 { margin: 0; white-space: pre-line; font: 500 clamp(56px, 6.8vw, 92px)/.98 Georgia, "Microsoft YaHei", serif; letter-spacing: -.05em; }
+.china-hero > div { align-self: end; padding-top: 22px; border-top: 1px solid rgba(43,33,29,.4); }
+.china-hero strong { display: block; font-size: 16px; line-height: 1.55; }
+.china-hero > div > span { display: block; margin-top: 16px; color: #57372c; font-size: 12px; line-height: 1.9; }
+.china-hero > div > div { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.china-hero a { min-height: 46px; display: inline-flex; align-items: center; padding: 12px 15px; border: 1px solid rgba(43,33,29,.4); font-size: 10px; font-weight: 700; }
+.china-hero a:first-child { background: var(--ink); border-color: var(--ink); color: white; }
+.china-trust { display: grid; grid-template-columns: repeat(4, 1fr); padding: 0 clamp(24px, 7vw, 112px); background: var(--brown); color: white; }
+.china-trust > div { min-height: 135px; display: grid; align-content: center; gap: 10px; padding: 24px; border-left: 1px solid rgba(255,255,255,.16); }
+.china-trust > div:last-child { border-right: 1px solid rgba(255,255,255,.16); }
+.china-trust strong { color: #f2c196; font-size: 12px; }
+.china-trust span { color: #d2c3ba; font-size: 10px; line-height: 1.65; }
+.china-stages, .china-projects { padding: 105px clamp(24px, 7vw, 112px); background: var(--ivory); }
+.china-projects { background: var(--sand); }
+.china-section-heading, .illustrative-case-heading { display: grid; grid-template-columns: 1.1fr .9fr; gap: 7vw; align-items: end; margin-bottom: 48px; }
+.china-section-heading > p, .illustrative-case-heading > p { grid-column: 1 / -1; margin-bottom: -28px; }
+.china-section-heading > span, .illustrative-case-heading > span { color: var(--muted); font-size: 12px; line-height: 1.9; }
+.china-stages > div:last-child, .china-projects > div:last-child { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.china-stages article, .china-projects article { min-height: 250px; padding: 25px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,250,242,.55); }
+.china-stages article:first-child, .china-stages article:last-child, .china-projects article:nth-child(2), .china-projects article:nth-child(5) { background: var(--orange); }
+.china-stages article > span, .china-projects article > span { color: var(--orange-deep); font: 700 9px Arial, sans-serif; }
+.china-stages article:first-child > span, .china-stages article:last-child > span, .china-projects article:nth-child(2) > span, .china-projects article:nth-child(5) > span { color: var(--ink); }
+.china-stages h3, .china-projects h3 { margin: 62px 0 15px; font: 500 22px/1.3 Georgia, "Microsoft YaHei", serif; }
+.china-stages article p, .china-projects article p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.85; }
+.china-stages article:first-child p, .china-stages article:last-child p, .china-projects article:nth-child(2) p, .china-projects article:nth-child(5) p { color: #4d3027; }
+.cross-border-model { display: grid; grid-template-columns: .78fr 1.22fr; gap: 8vw; padding: 105px clamp(24px, 7vw, 112px); background: var(--ink); color: white; }
+.cross-border-model > div > p { color: var(--gold); }
+.cross-border-model ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(255,255,255,.18); }
+.cross-border-model li { display: grid; grid-template-columns: 42px 175px 1fr; gap: 18px; padding: 25px 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+.cross-border-model li > span { color: var(--gold); font: 700 9px Arial, sans-serif; }
+.cross-border-model h3 { margin: 0; font-size: 14px; }
+.cross-border-model li p { margin: 0; color: #c5b8b0; font-size: 11px; line-height: 1.8; }
+
+.illustrative-case-section { padding: 105px clamp(24px, 7vw, 112px); background: #eadfce; }
+.illustrative-case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.illustrative-case-grid article { padding: 30px; border: 1px solid var(--line); background: var(--ivory); }
+.illustrative-case-grid article:nth-child(3n + 1) { background: #f4e5d7; }
+.illustrative-case-grid article > div:first-child { display: flex; justify-content: space-between; gap: 20px; }
+.illustrative-case-grid article > div:first-child > span { color: var(--orange-deep); font-size: 11px; font-weight: 700; }
+.illustrative-case-grid article > div:first-child > small { color: var(--muted); font-size: 8px; line-height: 1.5; text-align: right; }
+.illustrative-case-grid h3 { min-height: 72px; margin: 43px 0 22px; font: 500 28px/1.3 Georgia, "Microsoft YaHei", serif; }
+.illustrative-case-grid dl { margin: 0; }
+.illustrative-case-grid dl > div { display: grid; grid-template-columns: 105px 1fr; gap: 15px; padding: 15px 0; border-top: 1px solid var(--line); }
+.illustrative-case-grid dt { color: var(--orange-deep); font: 700 9px Arial, sans-serif; }
+.illustrative-case-grid dd { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.illustrative-case-grid .target { margin: 8px -18px 0; padding: 18px; background: var(--orange); border: 0; }
+.illustrative-case-grid .target dt, .illustrative-case-grid .target dd { color: var(--ink); }
+.illustrative-case-grid article > p { margin: 20px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: #6b5a52; font-size: 9px; line-height: 1.75; }
+.case-library-header > div > span { display: block; max-width: 720px; margin-top: 18px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+
+.team-network { display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; padding: 105px clamp(24px, 7vw, 112px); background: #e8dccb; }
+.team-network > div:first-child > span { display: block; margin-top: 24px; color: var(--muted); font-size: 12px; line-height: 1.9; }
+.team-name-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.team-name-grid article { min-height: 145px; display: grid; grid-template-columns: 34px 1fr; align-content: center; gap: 10px 14px; padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,250,242,.45); }
+.team-name-grid article > span { color: var(--orange-deep); font: 700 9px Arial, sans-serif; }
+.team-name-grid strong { font-size: 20px; }
+.team-name-grid small { grid-column: 2; color: var(--muted); font-size: 8px; letter-spacing: .035em; }
+
+@media (max-width: 900px) {
+  .china-home-entry, .china-hero, .china-section-heading, .illustrative-case-heading, .cross-border-model, .team-network { grid-template-columns: 1fr; }
+  .china-home-entry, .china-stages, .china-projects, .cross-border-model, .illustrative-case-section, .team-network { padding: 78px 22px; }
+  .china-hero { min-height: auto; align-content: start; gap: 38px; padding: 74px 22px; }
+  .china-hero > p, .china-section-heading > p, .illustrative-case-heading > p { margin-bottom: 0; }
+  .china-hero h1 { font-size: clamp(42px, 11vw, 52px); line-height: 1.08; }
+  .china-home-entry h2, .china-section-heading h2, .cross-border-model h2, .illustrative-case-heading h2, .team-network h2 { font-size: clamp(32px, 9vw, 42px); line-height: 1.14; }
+  .china-trust { grid-template-columns: repeat(2, 1fr); padding: 0 22px; }
+  .china-trust > div { min-height: 115px; border-right: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); }
+  .china-stages > div:last-child, .china-projects > div:last-child { grid-template-columns: repeat(2, 1fr); }
+  .cross-border-model li { grid-template-columns: 36px 1fr; }
+  .cross-border-model li p { grid-column: 2; }
+  .illustrative-case-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 540px) {
+  .china-trust, .china-stages > div:last-child, .china-projects > div:last-child, .team-name-grid { grid-template-columns: 1fr; }
+  .china-stages article, .china-projects article { min-height: 220px; }
+  .illustrative-case-grid article { padding: 22px; }
+  .illustrative-case-grid article > div:first-child { display: grid; }
+  .illustrative-case-grid article > div:first-child > small { text-align: left; }
+  .illustrative-case-grid h3 { min-height: 0; margin: 32px 0 20px; font-size: 24px; }
+  .illustrative-case-grid dl > div { grid-template-columns: 1fr; gap: 8px; }
+  .illustrative-case-grid .target { margin-inline: -10px; }
+}
+
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
