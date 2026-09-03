@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     title: 'AEI｜连接教育、研究与发展机遇',
     description: '面向中国家庭、学生、研究者与机构，连接全龄升学、竞赛科研、国际项目和全球流动的跨国服务体系。',
     type: 'website',
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'AEI 国际学习项目' }],
+    images: [{ url: '/art/aei-aspirations-hero.jpg', width: 1536, height: 864, alt: 'AEI 多元教育愿景抽象艺术主视觉' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'AEI｜亚瑟（新加坡）教育学院',
     description: '中国家庭服务、新加坡项目管理与全球教育资源协作。',
-    images: ['/og.jpg'],
+    images: ['/art/aei-aspirations-hero.jpg'],
   },
 };
 

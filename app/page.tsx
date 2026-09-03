@@ -15,17 +15,18 @@ export default function Home() {
   return (
     <main>
       <section className="lux-hero">
+        <div className="lux-hero-media" aria-hidden="true">
+          <img className="hero-art-base" src={assetPath('art/aei-aspirations-hero.jpg')} alt="" />
+          <img className="hero-art-layer hero-art-layer-a" src={assetPath('art/aei-aspirations-hero.jpg')} alt="" />
+          <img className="hero-art-layer hero-art-layer-b" src={assetPath('art/aei-aspirations-hero.jpg')} alt="" />
+          <div className="hero-art-wash" />
+        </div>
         <div className="hero-index">{tr('新加坡注册 · 中国家庭服务 · 全球资源协作', 'SINGAPORE-REGISTERED · CHINA FAMILY SERVICES · GLOBAL DELIVERY')}</div>
         <div className="lux-hero-copy">
           <p className="lux-kicker">{tr('新加坡 · 教育与国际合作', 'SINGAPORE · EDUCATION & GLOBAL CONNECTION')}</p>
-          <h1>{tr('让每一种成长，\n都有清晰路径。', 'A clearer pathway\nfor every ambition.')}</h1>
-          <p>{tr('面向中国家庭、学生、研究者、院校与机构，从幼儿园、小学、初高中到大学、硕博、科研、竞赛与全球发展，AEI 将跨国教育资源整理成清晰、可执行的长期路径。', 'For China-based families, students, researchers and institutions, AEI connects early years, school, university, postgraduate study, research, competitions and global development through clear, executable pathways.')}</p>
+          <h1>{tr('方向更清晰，\n成长更有力量。', 'Clarity in direction.\nAmbition in motion.')}</h1>
+          <p>{tr('面向中国家庭、学生、研究者、院校与机构，AEI 将幼儿园至硕博升学、竞赛科研、国际项目与全球发展资源，组织为清晰、可执行并可持续推进的长期路径。', 'For China-based families, students, researchers and institutions, AEI turns education from early years to postgraduate study, competitions, research, global programmes and mobility into clear, executable and sustainable pathways.')}</p>
           <div className="lux-hero-actions"><a className="solid-cta" href="/china/">{tr('中国家庭服务', 'China family services')}<span>↗</span></a><a className="line-cta" href="/services/">{tr('查看全部服务', 'Explore all services')}<span>→</span></a></div>
-        </div>
-        <div className="lux-hero-art" aria-hidden="true">
-          <div className="art-disc"><span>AEI</span><small>{tr('新加坡', 'SINGAPORE')}</small></div>
-          <div className="art-ring ring-a" /><div className="art-ring ring-b" />
-          <p>{lang === 'zh' ? <>教育<br />研究<br />机遇</> : <>EDUCATION<br />RESEARCH<br />OPPORTUNITY</>}</p>
         </div>
         <div className="hero-scroll">{tr('向下浏览', 'SCROLL')} <span>↓</span></div>
       </section>

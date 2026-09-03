@@ -95,6 +95,10 @@ export function SiteHeader() {
       <header className="lux-header">
         <a className="lux-brand" href="/" aria-label={lang === 'zh' ? '亚瑟（新加坡）教育学院首页' : 'Asia Education Institution home'}>
           <img src={assetPath('aei-mark.jpg')} alt={lang === 'zh' ? '亚瑟（新加坡）教育学院' : 'Asia Education Institution'} />
+          <span>
+            <strong>{lang === 'zh' ? '亚瑟（新加坡）教育学院' : 'ASIA EDUCATION INSTITUTION'}</strong>
+            <small>{lang === 'zh' ? 'ASIA EDUCATION INSTITUTION · SINGAPORE' : '亚瑟（新加坡）教育学院'}</small>
+          </span>
         </a>
         <nav className="desktop-nav" aria-label={lang === 'zh' ? '主导航' : 'Primary navigation'}>
           {menus.map((menu) => (
